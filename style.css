@@ -57,8 +57,8 @@ kraje {
 kraje::before, kraje::after {
     display: block;
     background-image: url("banner.png");
+    background-repeat: repeat-x; 
     content: "";
-    background-repeat:repeat-x; 
     height: 100px;
     background-size: contain;
     border-radius: 1em;
@@ -71,7 +71,8 @@ kraj {
     vertical-align: top;
     text-align: left;
     text-align-last: left;
-    width: 47%;
+    /*width: 47%;*/
+    min-width: 800px;
 
     border-style: solid;
     border-width: 2px;
@@ -165,6 +166,7 @@ kraj grupy-etniczne grupa-etniczna::after {
 
 kraj strefy-czasowe { 
     display: inline-block;
+    column-count: 2;
     vertical-align: top;
     height: 130px;
 
@@ -172,6 +174,7 @@ kraj strefy-czasowe {
 }
 
 kraj strefy-czasowe::before { 
+    display: block;
     content: "Strefy czasowe:";
 }
 
