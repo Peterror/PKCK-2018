@@ -201,7 +201,7 @@ kraj populacja::before {
 }
 
 kraj PKB::before {
-    content: "Produkt krajowy brutto: ";
+    content: "Produkt krajowy brutto(USD): ";
 }
 
 kraj region::before {
