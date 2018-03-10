@@ -1,0 +1,53 @@
+<!ELEMENT dokument (opis,kraje,regiony,grupy-etniczne,wydarzenia)>
+<!ELEMENT opis (autorzy,streszczenie)>
+<!ELEMENT autorzy (autor+)>
+<!ELEMENT streszczenie ANY>
+<!ELEMENT u (#PCDATA)>
+
+<!ELEMENT autor (#PCDATA)>
+<!ATTLIST autor index CDATA #REQUIRED>
+
+<!ELEMENT grupy-etniczne (grupa-etniczna*)>
+<!ELEMENT grupa-etniczna EMPTY>
+<!ATTLIST grupa-etniczna id ID #IMPLIED>
+<!ATTLIST grupa-etniczna idref IDREF #IMPLIED
+                        wartość CDATA #IMPLIED>
+
+<!ELEMENT regiony (region-główny+)>
+<!ELEMENT region-główny EMPTY>
+<!ATTLIST region-główny id ID #REQUIRED>
+
+<!ELEMENT kraje (kraj+)>
+<!ELEMENT kraj (nazwa,stolica,grupy-etniczne,strefy-czasowe,ważne-wydarzenia?,populacja,PKB,waluta,region)>
+
+<!ELEMENT stolica (nazwa,współrzędne)>
+<!ELEMENT nazwa (#PCDATA)>
+<!ELEMENT współrzędne (wysokość,szerokość)>
+<!ELEMENT szerokość (#PCDATA)>
+<!ELEMENT wysokość (#PCDATA)>
+
+<!ATTLIST szerokość typ (W|E) #REQUIRED>
+<!ATTLIST wysokość typ (N|S) #REQUIRED>
+
+<!ELEMENT populacja (#PCDATA)>
+<!ELEMENT PKB (#PCDATA)>
+
+<!ELEMENT strefy-czasowe (strefa-czasowa+)>
+<!ELEMENT strefa-czasowa (#PCDATA)>
+
+<!ELEMENT waluta (#PCDATA)>
+
+<!ELEMENT ważne-wydarzenia (ważne-wydarzenie*)>
+<!ELEMENT ważne-wydarzenie EMPTY>
+<!ATTLIST ważne-wydarzenie id IDREF #REQUIRED>
+
+<!ELEMENT region EMPTY>
+<!ATTLIST region idref IDREF #REQUIRED>
+
+<!ELEMENT wydarzenia (wydarzenie*)>
+<!ELEMENT wydarzenie (nazwa, data)>
+<!ELEMENT data EMPTY>
+<!ATTLIST wydarzenie id ID #REQUIRED>
+<!ATTLIST data dzień CDATA #REQUIRED
+                miesiąc (Styczeń|Luty|Marzec|Kwiecień|Maj|Czerwiec|Lipiec|Sierpień|Wrzesień|Październik|Listopad|Grudzień) #REQUIRED
+                rok CDATA #REQUIRED>

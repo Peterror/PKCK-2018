@@ -1,0 +1,254 @@
+dokument {
+    display: block;
+    margin: 1in 1in 1in 1in;
+    background-color: rgb(207, 207, 207);
+}
+
+opis {
+    display: table;
+    padding: 1cm;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(175, 175, 175);
+
+    background-color: whitesmoke;
+    border-radius: 1em;
+}
+
+autorzy::before {
+    content: "Autorzy dokumentu"
+}
+
+autorzy {
+    display: table-cell;
+    
+}
+
+autor::after {
+    content: " [numer albumu: " attr(index) "]";
+    font-weight: initial;
+}
+
+autor {
+    display: list-item;
+    font-weight: bold;
+}
+
+streszczenie {
+    display: table-cell;
+    text-align: justify;
+    width: 60%;
+}
+
+streszczenie u {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+kraje {
+    display: block;
+    align-content: center;
+    text-align: justify;
+    text-align-last: justify;
+    counter-reset: kraje;
+}
+
+kraje::before, kraje::after {
+    display: block;
+    background-image: url("banner.png");
+    content: "";
+    background-repeat:repeat-x; 
+    height: 100px;
+    background-size: contain;
+    border-radius: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+kraj {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    text-align-last: left;
+    width: 47%;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(175, 175, 175);
+    border-radius: 1em;
+
+    background-color: whitesmoke;
+
+    padding: 1em;
+}
+
+kraj nazwa {
+    display: block;
+    font-weight: bold;
+}
+
+kraj > nazwa {
+    border-bottom: dashed;
+    border-color: rgb(175, 175, 175);
+    border-bottom-width: 2px;
+    padding-bottom: 0.5em;
+    /*padding-top: 0.5em;*/
+    padding-left: 2em;
+}
+
+kraj > nazwa::before {
+    counter-increment: kraje;
+    content: counter(kraje) ": ";
+    font-weight: bold;
+}
+kraj > ważne-wydarzenia {
+    display: none;
+}
+
+stolica {
+    display: inline-block;
+    vertical-align: top;
+
+    border-right: rgb(175, 175, 175) 2px dashed;
+    padding-right: 1em;
+
+    margin: 1em;
+}
+
+stolica nazwa {
+    display: block;
+}
+
+stolica nazwa::before {
+    content: "Stolica: ";
+}
+
+stolica wysokość, stolica szerokość {
+    display: inline;
+    font-style: italic;
+    color: rgb(128, 128, 128);
+}
+
+stolica współrzędne > wysokość::after, stolica współrzędne > szerokość::after {
+    display: inline;
+    content: attr(typ);
+}
+
+kraj grupy-etniczne {
+    display: inline-block;
+    vertical-align: top;
+    width: 2in;
+
+    margin: 1em;
+}
+
+kraj grupy-etniczne::before {
+    display: block;
+    content: "Grupy etniczne:";
+}
+
+kraj grupy-etniczne grupa-etniczna {
+    display: block;
+}
+
+kraj grupy-etniczne grupa-etniczna::before {
+    display: inline;
+    content: attr(idref) ": ";
+    font-weight: bold;
+}
+
+kraj grupy-etniczne grupa-etniczna::after {
+    display: inline;
+    content: attr(wartość) "%";
+}
+
+kraj strefy-czasowe { 
+    display: inline-block;
+    vertical-align: top;
+    height: 130px;
+
+    margin: 1em;
+}
+
+kraj strefy-czasowe::before { 
+    content: "Strefy czasowe:";
+}
+
+kraj strefy-czasowe strefa-czasowa {
+    display: block;
+}
+
+waluta, populacja, PKB, region {
+    display: list-item;
+    margin-left: 5em;
+    vertical-align: text-bottom;
+}
+
+populacja {
+    margin-top: 2em;
+}
+
+kraj waluta::before {
+    content: "Waluta: ";
+}
+
+kraj populacja::before {
+    content: "Liczba mieszkańców: ";
+}
+
+kraj PKB::before {
+    content: "Produkt krajowy brutto: ";
+}
+
+kraj region::before {
+    content: attr(idref);
+    font-weight: bold;
+}
+
+dokument > grupy-etniczne {
+    display: none;
+}
+
+wydarzenia {
+    display: table;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(175, 175, 175);
+    border-radius: 1em;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: whitesmoke;
+    counter-reset: events;
+    padding: 1em;
+}
+
+wydarzenia::before {
+    content: "Lista ważnych wydarzeń w krajach:";
+    display: block;
+    padding: 0.5em;
+}
+
+wydarzenie {
+    display: table-row;
+    width: 100%;
+    padding: 0.5em;
+}
+
+wydarzenie > nazwa {
+    display: table-cell;
+    padding-left: 1em;
+    font-weight: bold;
+}
+
+wydarzenie > nazwa::before {
+    display: inline;
+    content: counter(events) ". ";
+    counter-increment: events;
+}
+
+wydarzenie > data::before {
+    display: table-cell;
+    content: attr(dzień) " / " attr(miesiąc) " / " attr(rok);
+}
