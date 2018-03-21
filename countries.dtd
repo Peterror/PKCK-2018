@@ -30,10 +30,16 @@
 <!ATTLIST wysokość typ (N|S) #REQUIRED>
 
 <!ELEMENT populacja (#PCDATA)>
+<!ATTLIST populacja jednostka (osoba|tyś|mln|mld) "osoba">
+
 <!ELEMENT PKB (#PCDATA)>
+<!ATTLIST PKB waluta CDATA "USD"
+            jednostka (mln|mld|tyś) "mld">
 
 <!ELEMENT strefy-czasowe (strefa-czasowa+)>
-<!ELEMENT strefa-czasowa (#PCDATA)>
+<!ELEMENT strefa-czasowa EMPTY>
+<!ATTLIST strefa-czasowa wartość CDATA #REQUIRED
+                        znak (p|m) #REQUIRED>
 
 <!ELEMENT waluta (#PCDATA)>
 

@@ -182,6 +182,14 @@ kraj strefy-czasowe strefa-czasowa {
     display: block;
 }
 
+kraj strefy-czasowe strefa-czasowa[znak="p"]::before {
+    content: "UTC +" attr(wartość);
+}
+
+kraj strefy-czasowe strefa-czasowa[znak="m"]::before {
+    content: "UTC -" attr(wartość);
+}
+
 waluta, populacja, PKB, region {
     display: list-item;
     margin-left: 5em;
@@ -200,8 +208,12 @@ kraj populacja::before {
     content: "Liczba mieszkańców: ";
 }
 
+kraj populacja:not([jednostka="osoba"])::after {
+    content: " " attr(jednostka)
+}
+
 kraj PKB::before {
-    content: "Produkt krajowy brutto(USD): ";
+    content: "Produkt krajowy brutto(" attr(waluta) "): ";
 }
 
 kraj region::before {

@@ -34,14 +34,14 @@
         <grupa-etniczna idref="Ukraincy" wartość="0.12" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="chrzestPolski" />
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>38422346</populacja>
-      <PKB>482,9 mld</PKB>
+      <populacja jednostka="osoba">38422346</populacja>
+      <PKB waluta="USD" jednostka="mld">482.9</PKB>
       <waluta>PLN</waluta>
       <region idref="Europa" />
     </kraj>
@@ -59,13 +59,13 @@
         <grupa-etniczna idref="Niemcy" wartość="80.8" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>82349400</populacja>
-      <PKB>3466,6 mld</PKB>
+      <populacja jednostka="osoba">82349400</populacja>
+      <PKB waluta="USD" jednostka="mld">3466.6</PKB>
       <waluta>EUR</waluta>
       <region idref="Europa" />
     </kraj>
@@ -85,21 +85,21 @@
         <grupa-etniczna idref="Azjaci" wartość="5.6" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC -4</strefa-czasowa>
-        <strefa-czasowa>UTC -6</strefa-czasowa>
-        <strefa-czasowa>UTC -7</strefa-czasowa>
-        <strefa-czasowa>UTC -8</strefa-czasowa> 
-        <strefa-czasowa>UTC -9</strefa-czasowa> 
-        <strefa-czasowa>UTC -10</strefa-czasowa>
-        <strefa-czasowa>UTC -11</strefa-czasowa>
-        <strefa-czasowa>UTC -12</strefa-czasowa>
+        <strefa-czasowa wartość="4" znak="m" />
+        <strefa-czasowa wartość="6" znak="m" />
+        <strefa-czasowa wartość="7" znak="m" />
+        <strefa-czasowa wartość="8" znak="m" />
+        <strefa-czasowa wartość="9" znak="m" />
+        <strefa-czasowa wartość="10" znak="m" />
+        <strefa-czasowa wartość="11" znak="m" />
+        <strefa-czasowa wartość="12" znak="m" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
         <ważne-wydarzenie id="deklaracjaNiepodległości" />
       </ważne-wydarzenia>
-      <populacja>326079000</populacja>
-      <PKB>18036,6 mld</PKB>
+      <populacja jednostka="osoba">326079000</populacja>
+      <PKB waluta="USD" jednostka="mld">18036.6</PKB>
       <waluta>USD</waluta>
       <region idref="A.Północna" />
     </kraj>
@@ -116,13 +116,13 @@
         <grupa-etniczna idref="Czesi" wartość="64" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>10541466</populacja>
-      <PKB>193,5 mld</PKB>
+      <populacja jednostka="osoba">10541466</populacja>
+      <PKB waluta="USD" jednostka="mld">193.5</PKB>
       <waluta>CZK</waluta>
       <region idref="Europa" />
     </kraj>
@@ -141,23 +141,23 @@
         <grupa-etniczna idref="Ukraincy" wartość="1.4" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +2</strefa-czasowa>
-        <strefa-czasowa>UTC +3</strefa-czasowa>
-        <strefa-czasowa>UTC +4</strefa-czasowa>
-        <strefa-czasowa>UTC +5</strefa-czasowa>
-        <strefa-czasowa>UTC +6</strefa-czasowa>
-        <strefa-czasowa>UTC +7</strefa-czasowa>
-        <strefa-czasowa>UTC +8</strefa-czasowa>
-        <strefa-czasowa>UTC +9</strefa-czasowa>
-        <strefa-czasowa>UTC +10</strefa-czasowa>    
-        <strefa-czasowa>UTC +11</strefa-czasowa>
-        <strefa-czasowa>UTC +12</strefa-czasowa>
+        <strefa-czasowa wartość="2" znak="p" />
+        <strefa-czasowa wartość="3" znak="p" />
+        <strefa-czasowa wartość="4" znak="p" />
+        <strefa-czasowa wartość="5" znak="p" />
+        <strefa-czasowa wartość="6" znak="p" />
+        <strefa-czasowa wartość="7" znak="p" />
+        <strefa-czasowa wartość="8" znak="p" />
+        <strefa-czasowa wartość="9" znak="p" />
+        <strefa-czasowa wartość="10" znak="p" />
+        <strefa-czasowa wartość="11" znak="p" />
+        <strefa-czasowa wartość="12" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>146877088</populacja>
-      <PKB>1522,9 mld</PKB>
+      <populacja jednostka="osoba">146877088</populacja>
+      <PKB waluta="USD" jednostka="mld">1522.9</PKB>
       <waluta>RUB</waluta>
       <region idref="Azja" />
     </kraj>
@@ -174,13 +174,13 @@
         <grupa-etniczna idref="Han" wartość="91.51" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +8</strefa-czasowa>
+        <strefa-czasowa wartość="8" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>1379302771</populacja>
-      <PKB>13118,7 mld</PKB>
+      <populacja jednostka="osoba">1379302771</populacja>
+      <PKB waluta="USD" jednostka="mld">13118.7</PKB>
       <waluta>CNY</waluta>
       <region idref="Azja" />
     </kraj>
@@ -198,12 +198,12 @@
         <grupa-etniczna idref="Pakistańczycy" wartość="12.53" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +4</strefa-czasowa>
+        <strefa-czasowa wartość="4" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>5927482</populacja>
-      <PKB>345,4 mld</PKB>
+      <populacja jednostka="osoba">5927482</populacja>
+      <PKB waluta="USD" jednostka="mld">345.4</PKB>
       <waluta>AED</waluta>
       <region idref="Azja" />
     </kraj>
@@ -220,12 +220,12 @@
         <grupa-etniczna idref="Arabowie" wartość="90" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +2</strefa-czasowa>
+        <strefa-czasowa wartość="2" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>97041072</populacja>
-      <PKB>330,8 mld</PKB>
+      <populacja jednostka="osoba">97041072</populacja>
+      <PKB waluta="USD" jednostka="mld">330.8</PKB>
       <waluta>EGP</waluta>
       <region idref="Afryka" />
     </kraj>
@@ -244,10 +244,10 @@
         <grupa-etniczna idref="Azjaci" wartość="2.5" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +2</strefa-czasowa>
+        <strefa-czasowa wartość="2" znak="p" />
       </strefy-czasowe>
-      <populacja>54841552</populacja>
-      <PKB>384,3 mld</PKB>
+      <populacja jednostka="osoba">54841552</populacja>
+      <PKB waluta="USD" jednostka="mld">384.3</PKB>
       <waluta>ZAR</waluta>
       <region idref="Afryka" />
     </kraj>
@@ -264,13 +264,13 @@
         <grupa-etniczna idref="Biali" wartość="89.4" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>67158000</populacja>
-      <PKB>2421,5 mld</PKB>
+      <populacja jednostka="osoba">67158000</populacja>
+      <PKB waluta="USD" jednostka="mld">2421.5</PKB>
       <waluta>EUR</waluta>
       <region idref="Europa" />
     </kraj>
@@ -288,17 +288,17 @@
         <grupa-etniczna idref="Azjaci" wartość="14.5" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC -3</strefa-czasowa>
-        <strefa-czasowa>UTC -4</strefa-czasowa>
-        <strefa-czasowa>UTC -5</strefa-czasowa>
-        <strefa-czasowa>UTC -6</strefa-czasowa>
-        <strefa-czasowa>UTC -7</strefa-czasowa>
-        <strefa-czasowa>UTC -8</strefa-czasowa>
+        <strefa-czasowa wartość="3" znak="m" />
+        <strefa-czasowa wartość="4" znak="m" />
+        <strefa-czasowa wartość="5" znak="m" />
+        <strefa-czasowa wartość="6" znak="m" />
+        <strefa-czasowa wartość="7" znak="m" />
+        <strefa-czasowa wartość="8" znak="m" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>36708083</populacja>
-      <PKB>1788,7 mld</PKB>
+      <populacja jednostka="osoba">36708083</populacja>
+      <PKB waluta="USD" jednostka="mld">1788.7</PKB>
       <waluta>CAD</waluta>
       <region idref="A.Północna" />
     </kraj>
@@ -315,15 +315,15 @@
         <grupa-etniczna idref="Latynosi" wartość="89.4" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC -5</strefa-czasowa>
-        <strefa-czasowa>UTC -6</strefa-czasowa>
-        <strefa-czasowa>UTC -7</strefa-czasowa>
-        <strefa-czasowa>UTC -8</strefa-czasowa>
+        <strefa-czasowa wartość="5" znak="m" />
+        <strefa-czasowa wartość="6" znak="m" />
+        <strefa-czasowa wartość="7" znak="m" />
+        <strefa-czasowa wartość="8" znak="m" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>124574795</populacja>
-      <PKB>1142,5 mld</PKB>
+      <populacja jednostka="osoba">124574795</populacja>
+      <PKB waluta="USD" jednostka="mld">1142.5</PKB>
       <waluta>MXN</waluta>
       <region idref="A.Północna" />
     </kraj>
@@ -340,12 +340,12 @@
         <grupa-etniczna idref="Europejczycy" wartość="100" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>1000</populacja>
-      <PKB>0</PKB>
+      <populacja jednostka="osoba">1000</populacja>
+      <PKB waluta="USD" jednostka="mld">0</PKB>
       <waluta>EUR</waluta>
       <region idref="Europa" />
     </kraj>
@@ -362,13 +362,13 @@
         <grupa-etniczna idref="Europejczycy" wartość="77.5" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>60788140</populacja>
-      <PKB>1815,7 mld</PKB>
+      <populacja jednostka="osoba">60788140</populacja>
+      <PKB waluta="USD" jednostka="mld">1815.7</PKB>
       <waluta>EUR</waluta>
       <region idref="Europa" />
     </kraj>
@@ -385,13 +385,13 @@
         <grupa-etniczna idref="Europejczycy" wartość="100" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>5214900</populacja>
-      <PKB>389,4 mld</PKB>
+      <populacja jednostka="osoba">5214900</populacja>
+      <PKB waluta="USD" jednostka="mld">389.4</PKB>
       <waluta>NOK</waluta>
       <region idref="Europa" />
     </kraj>
@@ -408,14 +408,14 @@
         <grupa-etniczna idref="Europejczycy" wartość="93.7" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +8</strefa-czasowa>
-        <strefa-czasowa>UTC +9</strefa-czasowa>
-        <strefa-czasowa>UTC +10</strefa-czasowa>
+        <strefa-czasowa wartość="8" znak="p" />
+        <strefa-czasowa wartość="9" znak="p" />
+        <strefa-czasowa wartość="10" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>24511800</populacja>
-      <PKB>1390</PKB>
+      <populacja jednostka="osoba">24511800</populacja>
+      <PKB waluta="USD" jednostka="mld">1390</PKB>
       <waluta>AUD</waluta>
       <region idref="Australia" />
     </kraj>
@@ -433,13 +433,13 @@
         <grupa-etniczna idref="Niemcy" wartość="2.7" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>8772865</populacja>
-      <PKB>409,3 mld</PKB>
+      <populacja jednostka="osoba">8772865</populacja>
+      <PKB waluta="USD" jednostka="mld">409.3</PKB>
       <waluta>EUR</waluta>
       <region idref="Europa" />
     </kraj>
@@ -457,13 +457,13 @@
         <grupa-etniczna idref="Koreańczycy" wartość="0.5" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +9</strefa-czasowa>
+        <strefa-czasowa wartość="9" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>126451398</populacja>
-      <PKB>4841 mld</PKB>
+      <populacja jednostka="osoba">126451398</populacja>
+      <PKB waluta="USD" jednostka="mld">4841</PKB>
       <waluta>JPY</waluta>
       <region idref="Azja" />
     </kraj>
@@ -480,12 +480,12 @@
         <grupa-etniczna idref="Thai" wartość="34.1" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +7</strefa-czasowa>
+        <strefa-czasowa wartość="7" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>67091089</populacja>
-      <PKB>387,2 mld</PKB>
+      <populacja jednostka="osoba">67091089</populacja>
+      <PKB waluta="USD" jednostka="mld">387.2</PKB>
       <waluta>THB</waluta>
       <region idref="Azja" />
     </kraj>
@@ -504,13 +504,13 @@
         <grupa-etniczna idref="Czarni" wartość="3.0" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC 0</strefa-czasowa>
+        <strefa-czasowa wartość="0" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
         <ważne-wydarzenie id="drugaWojna" />
       </ważne-wydarzenia>
-      <populacja>65648100</populacja>
-      <PKB>2849,3 mld</PKB>
+      <populacja jednostka="osoba">65648100</populacja>
+      <PKB waluta="USD" jednostka="mld">2849.3</PKB>
       <waluta>GBP</waluta>
       <region idref="Europa" />
     </kraj>
@@ -527,12 +527,12 @@
         <grupa-etniczna idref="Latynosi" wartość="89.9" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +1</strefa-czasowa>
+        <strefa-czasowa wartość="1" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>48563476</populacja>
-      <PKB>1199,7 mld</PKB>
+      <populacja jednostka="osoba">48563476</populacja>
+      <PKB waluta="USD" jednostka="mld">1199.7</PKB>
       <waluta>EUR</waluta>
       <region idref="Europa" />
     </kraj>
@@ -550,12 +550,12 @@
         <grupa-etniczna idref="Czarni" wartość="10.6" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC -5</strefa-czasowa>
+        <strefa-czasowa wartość="5" znak="m" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>47698524</populacja>
-      <PKB>381,8 mld</PKB>
+      <populacja jednostka="osoba">47698524</populacja>
+      <PKB waluta="USD" jednostka="mld">381.8</PKB>
       <waluta>COP</waluta>
       <region idref="A.Południowa" />
     </kraj>
@@ -573,12 +573,12 @@
         <grupa-etniczna idref="Rosjanie" wartość="17.3" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +2</strefa-czasowa>
+        <strefa-czasowa wartość="2" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>42805731</populacja>
-      <PKB>93,2 mld</PKB>
+      <populacja jednostka="osoba">42805731</populacja>
+      <PKB waluta="USD" jednostka="mld">93.2</PKB>
       <waluta>UAH</waluta>
       <region idref="Europa" />
     </kraj>
@@ -596,12 +596,12 @@
         <grupa-etniczna idref="Polacy" wartość="5.6" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +2</strefa-czasowa>
+        <strefa-czasowa wartość="2" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>2831670</populacja>
-      <PKB>46,7 mld</PKB>
+      <populacja jednostka="osoba">2831670</populacja>
+      <PKB waluta="USD" jednostka="mld">46.7</PKB>
       <waluta>EUR</waluta>
       <region idref="Europa" />
     </kraj>    
@@ -618,12 +618,12 @@
         <grupa-etniczna idref="Azjaci" wartość="100" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +8:30</strefa-czasowa>
+        <strefa-czasowa wartość="8.5" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>25368620</populacja>
-      <PKB>28,5 mld</PKB>
+      <populacja jednostka="osoba">25368620</populacja>
+      <PKB waluta="USD" jednostka="mld">28.5</PKB>
       <waluta>KPW</waluta>
       <region idref="Azja" />
     </kraj>    
@@ -640,12 +640,12 @@
         <grupa-etniczna idref="Azjaci" wartość="100" />
       </grupy-etniczne>
       <strefy-czasowe>
-        <strefa-czasowa>UTC +8:30</strefa-czasowa>
+        <strefa-czasowa wartość="8.5" znak="p" />
       </strefy-czasowe>
       <ważne-wydarzenia>
       </ważne-wydarzenia>
-      <populacja>50801405</populacja>
-      <PKB>1498,1 mld</PKB>
+      <populacja jednostka="osoba">50801405</populacja>
+      <PKB waluta="USD" jednostka="mld">1498.1</PKB>
       <waluta>KRW</waluta>
       <region idref="Azja" />
     </kraj>
