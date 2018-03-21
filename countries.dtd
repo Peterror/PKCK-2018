@@ -11,7 +11,8 @@
 <!ELEMENT grupa-etniczna EMPTY>
 <!ATTLIST grupa-etniczna id ID #IMPLIED>
 <!ATTLIST grupa-etniczna idref IDREF #IMPLIED
-                        wartość CDATA #IMPLIED>
+                        wartość CDATA #IMPLIED
+                        jednostka CDATA #IMPLIED>
 
 <!ELEMENT regiony (region-główny+)>
 <!ELEMENT region-główny EMPTY>

@@ -29,9 +29,9 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Polacy" wartość="94.6" />
-        <grupa-etniczna idref="Niemcy" wartość="0.28" />
-        <grupa-etniczna idref="Ukraincy" wartość="0.12" />
+        <grupa-etniczna jednostka="%" idref="Polacy" wartość="94.6" />
+        <grupa-etniczna jednostka="%" idref="Niemcy" wartość="0.28" />
+        <grupa-etniczna jednostka="%" idref="Ukraincy" wartość="0.12" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -56,7 +56,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Niemcy" wartość="80.8" />
+        <grupa-etniczna jednostka="%" idref="Niemcy" wartość="80.8" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -80,9 +80,9 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Biali" wartość="77.1" />
-        <grupa-etniczna idref="Czarni" wartość="13.3" />
-        <grupa-etniczna idref="Azjaci" wartość="5.6" />
+        <grupa-etniczna jednostka="%" idref="Biali" wartość="77.1" />
+        <grupa-etniczna jednostka="%" idref="Czarni" wartość="13.3" />
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="5.6" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="4" znak="m" />
@@ -113,7 +113,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Czesi" wartość="64" />
+        <grupa-etniczna jednostka="%" idref="Czesi" wartość="64" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -136,9 +136,9 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Rosjanie" wartość="81" />
-        <grupa-etniczna idref="Tatarzy" wartość="3.7" />
-        <grupa-etniczna idref="Ukraincy" wartość="1.4" />
+        <grupa-etniczna jednostka="%" idref="Rosjanie" wartość="81" />
+        <grupa-etniczna jednostka="%" idref="Tatarzy" wartość="3.7" />
+        <grupa-etniczna jednostka="%" idref="Ukraincy" wartość="1.4" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="2" znak="p" />
@@ -171,7 +171,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Han" wartość="91.51" />
+        <grupa-etniczna jednostka="%" idref="Han" wartość="91.51" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="8" znak="p" />
@@ -194,8 +194,8 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Hindusi" wartość="50" />
-        <grupa-etniczna idref="Pakistańczycy" wartość="12.53" />
+        <grupa-etniczna jednostka="%" idref="Hindusi" wartość="50" />
+        <grupa-etniczna jednostka="%" idref="Pakistańczycy" wartość="12.53" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="4" znak="p" />
@@ -217,7 +217,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Arabowie" wartość="90" />
+        <grupa-etniczna jednostka="%" idref="Arabowie" wartość="90" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="2" znak="p" />
@@ -239,9 +239,9 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Czarni" wartość="80.2" />
-        <grupa-etniczna idref="Biali" wartość="8.4" />
-        <grupa-etniczna idref="Azjaci" wartość="2.5" />
+        <grupa-etniczna jednostka="%" idref="Czarni" wartość="80.2" />
+        <grupa-etniczna jednostka="%" idref="Biali" wartość="8.4" />
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="2.5" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="2" znak="p" />
@@ -261,7 +261,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Biali" wartość="89.4" />
+        <grupa-etniczna jednostka="%" idref="Biali" wartość="89.4" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -284,8 +284,8 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Europejczycy" wartość="74.3" />
-        <grupa-etniczna idref="Azjaci" wartość="14.5" />
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="74.3" />
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="14.5" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="3" znak="m" />
@@ -312,7 +312,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Latynosi" wartość="89.4" />
+        <grupa-etniczna jednostka="%" idref="Latynosi" wartość="89.4" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="5" znak="m" />
@@ -337,7 +337,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Europejczycy" wartość="100" />
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="100" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -359,7 +359,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Europejczycy" wartość="77.5" />
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="77.5" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -382,7 +382,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Europejczycy" wartość="100" />
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="100" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -405,7 +405,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Europejczycy" wartość="93.7" />
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="93.7" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="8" znak="p" />
@@ -429,8 +429,8 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Austriacy" wartość="82.3" />
-        <grupa-etniczna idref="Niemcy" wartość="2.7" />
+        <grupa-etniczna jednostka="%" idref="Austriacy" wartość="82.3" />
+        <grupa-etniczna jednostka="%" idref="Niemcy" wartość="2.7" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -453,8 +453,8 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Japończycy" wartość="98.5" />
-        <grupa-etniczna idref="Koreańczycy" wartość="0.5" />
+        <grupa-etniczna jednostka="%" idref="Japończycy" wartość="98.5" />
+        <grupa-etniczna jednostka="%" idref="Koreańczycy" wartość="0.5" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="9" znak="p" />
@@ -477,7 +477,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Thai" wartość="34.1" />
+        <grupa-etniczna jednostka="%" idref="Thai" wartość="34.1" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="7" znak="p" />
@@ -499,9 +499,9 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Biali" wartość="87.1" />
-        <grupa-etniczna idref="Azjaci" wartość="7.0" />
-        <grupa-etniczna idref="Czarni" wartość="3.0" />
+        <grupa-etniczna jednostka="%" idref="Biali" wartość="87.1" />
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="7.0" />
+        <grupa-etniczna jednostka="%" idref="Czarni" wartość="3.0" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="0" znak="p" />
@@ -524,7 +524,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Latynosi" wartość="89.9" />
+        <grupa-etniczna jednostka="%" idref="Latynosi" wartość="89.9" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="1" znak="p" />
@@ -546,8 +546,8 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Latynosi" wartość="86" />
-        <grupa-etniczna idref="Czarni" wartość="10.6" />
+        <grupa-etniczna jednostka="%" idref="Latynosi" wartość="86" />
+        <grupa-etniczna jednostka="%" idref="Czarni" wartość="10.6" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="5" znak="m" />
@@ -569,8 +569,8 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Ukraincy" wartość="77.8" />
-        <grupa-etniczna idref="Rosjanie" wartość="17.3" />
+        <grupa-etniczna jednostka="%" idref="Ukraincy" wartość="77.8" />
+        <grupa-etniczna jednostka="%" idref="Rosjanie" wartość="17.3" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="2" znak="p" />
@@ -592,8 +592,8 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Litwini" wartość="86.7" />
-        <grupa-etniczna idref="Polacy" wartość="5.6" />
+        <grupa-etniczna jednostka="%" idref="Litwini" wartość="86.7" />
+        <grupa-etniczna jednostka="%" idref="Polacy" wartość="5.6" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="2" znak="p" />
@@ -615,7 +615,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Azjaci" wartość="100" />
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="100" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="8.5" znak="p" />
@@ -637,7 +637,7 @@
         </współrzędne>
       </stolica>
       <grupy-etniczne>
-        <grupa-etniczna idref="Azjaci" wartość="100" />
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="100" />
       </grupy-etniczne>
       <strefy-czasowe>
         <strefa-czasowa wartość="8.5" znak="p" />
