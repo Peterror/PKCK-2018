@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="style.css" type="text/css"?>
-<!DOCTYPE dokument SYSTEM "countries.dtd">
 
-<dokument>
-  <opis>
-    <autorzy>
-      <autor index="204037">Piotr Zieliński</autor>
-      <autor index="203967">Łukasz Pierścieniewski</autor>
-    </autorzy>
-    <streszczenie>
+<dokument xmlns="file://root.zadanie2/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="schema.xsd">
+
+  <meta:opis xmlns:meta="file://root.zadanie2/meta">
+    <meta:autorzy>
+      <meta:autor index="204037">Piotr Zieliński</meta:autor>
+      <meta:autor index="203967">Łukasz Pierścieniewski</meta:autor>
+    </meta:autorzy>
+    <meta:streszczenie>
       Dokument ten zawiera informacje na temat wybranych krajów świata. Dla każdego z zawartych krajów umieszczone
-      zostały informacje o: <u>stolicy</u> i jej współrzędnych geograficznych, podziału na <u>grupy etniczne</u> i 
-      <u>strefy czasowe</u>. Dodatkowo informacje o <u>populacji</u>, <u>PKB</u>, <u>walucie</u> oraz <u>regionie</u>
-      zostały przypisane do każdego państwa. Przechowywana jest też informacja na temat <u>ważnych wydarzeń</u> 
+      zostały informacje o: stolicy i jej współrzędnych geograficznych, podziału na grupy etniczne i 
+      strefy czasowe. Dodatkowo informacje o populacji, PKB, walucie oraz regionie
+      zostały przypisane do każdego państwa. Przechowywana jest też informacja na temat ważnych wydarzeń
       oraz krajów których one dotyczyły
-    </streszczenie>
-  </opis>
+    </meta:streszczenie>
+  </meta:opis>
 
   <!--Tutaj lista krajów -->
   <kraje>
@@ -652,15 +654,16 @@
   </kraje>
   <!--Tutaj lista regionów-->
   <regiony>
-    <region-główny id="Europa" />
-    <region-główny id="A.Północna" />
-    <region-główny id="A.Południowa" />
-    <region-główny id="Azja" />
-    <region-główny id="Australia" />
-    <region-główny id="Afryka" />
+    <region id="Europa" />
+    <region id="Europa" />
+    <region id="A.Północna" />
+    <region id="A.Południowa" />
+    <region id="Azja" />
+    <region id="Australia" />
+    <region id="Afryka" />
   </regiony>
 
-  <!--Tutaj grupy etniczne-->
+  <!--Tutaj grupy etniczne--><!--
   <grupy-etniczne>
     <grupa-etniczna id="Polacy" />
     <grupa-etniczna id="Niemcy" />
@@ -683,10 +686,10 @@
     <grupa-etniczna id="Litwini" />
     <grupa-etniczna id="Hindusi" />
     <grupa-etniczna id="Czesi" />
-  </grupy-etniczne>
+  </grupy-etniczne>-->
 
-  <!--Tutaj wydarzenia do podlinkowania-->
-  <wydarzenia>
+  <!--Tutaj wydarzenia do podlinkowania--><!--
+  <event:wydarzenia xmlns:event="file://root.zadanie2/event">
     <wydarzenie id="chrzestPolski">
       <nazwa>Chrzest Polski</nazwa>
       <data dzień="14" miesiąc="Kwiecień" rok="996" />
@@ -699,5 +702,6 @@
       <nazwa>Deklaracja niepodległosci Stanów Zjednoczonych</nazwa>
       <data dzień="4" miesiąc="Lipiec" rok="1776" />
     </wydarzenie>
-  </wydarzenia>
+  </event:wydarzenia>
+  -->
 </dokument>

@@ -34,7 +34,7 @@
 <!ATTLIST populacja jednostka (osoba|tyś|mln|mld) "osoba">
 
 <!ELEMENT PKB (#PCDATA)>
-<!ATTLIST PKB waluta CDATA "USD"
+<!ATTLIST PKB waluta CDATA #FIXED "USD"
             jednostka (mln|mld|tyś) "mld">
 
 <!ELEMENT strefy-czasowe (strefa-czasowa+)>
