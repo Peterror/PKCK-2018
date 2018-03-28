@@ -655,7 +655,6 @@
   <!--Tutaj lista regionów-->
   <regiony>
     <region id="Europa" />
-    <region id="Europa" />
     <region id="A.Północna" />
     <region id="A.Południowa" />
     <region id="Azja" />
@@ -663,7 +662,7 @@
     <region id="Afryka" />
   </regiony>
 
-  <!--Tutaj grupy etniczne--><!--
+  <!--Tutaj grupy etniczne-->
   <grupy-etniczne>
     <grupa-etniczna id="Polacy" />
     <grupa-etniczna id="Niemcy" />
@@ -686,10 +685,10 @@
     <grupa-etniczna id="Litwini" />
     <grupa-etniczna id="Hindusi" />
     <grupa-etniczna id="Czesi" />
-  </grupy-etniczne>-->
+  </grupy-etniczne>
 
-  <!--Tutaj wydarzenia do podlinkowania--><!--
-  <event:wydarzenia xmlns:event="file://root.zadanie2/event">
+  <!--Tutaj wydarzenia do podlinkowania-->
+  <wydarzenia>
     <wydarzenie id="chrzestPolski">
       <nazwa>Chrzest Polski</nazwa>
       <data dzień="14" miesiąc="Kwiecień" rok="996" />
@@ -702,6 +701,9 @@
       <nazwa>Deklaracja niepodległosci Stanów Zjednoczonych</nazwa>
       <data dzień="4" miesiąc="Lipiec" rok="1776" />
     </wydarzenie>
-  </event:wydarzenia>
-  -->
+    <wydarzenie id="zadanie1">
+      <nazwa>Oddanie pierwszego zadania z PKCK</nazwa>
+      <kiedy>2018-03-21</kiedy>
+    </wydarzenie>
+  </wydarzenia>
 </dokument>
