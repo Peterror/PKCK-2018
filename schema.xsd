@@ -234,6 +234,13 @@
         <xsd:attribute name="id" type="xsd:NCName" use="required" />
     </xsd:complexType>
 
+    <xsd:simpleType name="Zadanie2Odp">
+        <xsd:restriction base="xsd:NCName">
+            <xsd:pattern value="\p{Lu}\p{Ll}+" />
+            <xsd:maxLength value="20" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
     <xsd:element name="dokument">
         <xsd:complexType>
             <xsd:sequence>
@@ -264,7 +271,7 @@
                         <xsd:sequence>
                             <xsd:element name="grupa-etniczna" maxOccurs="unbounded">
                                 <xsd:complexType>
-                                    <xsd:attribute name="id" type="xsd:NCName" use="required" />
+                                    <xsd:attribute name="id" type="Zadanie2Odp" use="required" />
                                 </xsd:complexType>
                             </xsd:element>
                         </xsd:sequence>

@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raport xmlns:t="file://root.zadanie2/"
+        xmlns:m="file://root.zadanie2/meta"
+        xmlns="file://root.zadanie2/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <streszczenie>
+      Dokument ten zawiera informacje na temat wybranych krajów świata. Dla każdego z zawartych krajów umieszczone
+      zostały informacje o: stolicy i jej współrzędnych geograficznych, podziału na grupy etniczne i 
+      strefy czasowe. Dodatkowo informacje o populacji, PKB, walucie oraz regionie
+      zostały przypisane do każdego państwa. Przechowywana jest też informacja na temat ważnych wydarzeń
+      oraz krajów których one dotyczyły
+    </streszczenie>
+   <autorzy>
+      <autor>Piotr Zieliński, nr indeksu: 204037</autor>
+      <autor>Łukasz Pierścieniewski, nr indeksu: 203967</autor>
+   </autorzy>
+   <kraj>
+      <nazwa>Stany Zjednoczone</nazwa>
+      <stolica>
+         <nazwa>Waszyngton</nazwa>
+         <x>38.53N</x>
+         <y>77.02W</y>
+      </stolica>
+      <PKB>18036.6mld USD</PKB>
+      <region>A.Północna</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Biali</nazwa>
+            <liczność>77.1%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Czarni</nazwa>
+            <liczność>13.3%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Azjaci</nazwa>
+            <liczność>5.6%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+         <wydarzenie>
+            <wydarzenie id="deklaracjaNiepodległości">
+               <nazwa>Deklaracja niepodległosci Stanów Zjednoczonych</nazwa>
+               <data dzień="4" miesiąc="Lipiec" rok="1776"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Chiny</nazwa>
+      <stolica>
+         <nazwa>Pekin</nazwa>
+         <x>39.55N</x>
+         <y>116.23E</y>
+      </stolica>
+      <PKB>13118.7mld USD</PKB>
+      <region>Azja</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Han</nazwa>
+            <liczność>91.51%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Japonia</nazwa>
+      <stolica>
+         <nazwa>Tokio</nazwa>
+         <x>35.68N</x>
+         <y>139.77E</y>
+      </stolica>
+      <PKB>4841mld USD</PKB>
+      <region>Azja</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Japończycy</nazwa>
+            <liczność>98.5%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Koreańczycy</nazwa>
+            <liczność>0.5%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Niemcy</nazwa>
+      <stolica>
+         <nazwa>Berlin</nazwa>
+         <x>52.31N</x>
+         <y>12.24E</y>
+      </stolica>
+      <PKB>3466.6mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Niemcy</nazwa>
+            <liczność>80.8%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Wielka Brytania</nazwa>
+      <stolica>
+         <nazwa>Londyn</nazwa>
+         <x>51.30N</x>
+         <y>0.07W</y>
+      </stolica>
+      <PKB>2849.3mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Biali</nazwa>
+            <liczność>87.1%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Azjaci</nazwa>
+            <liczność>7.0%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Czarni</nazwa>
+            <liczność>3.0%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Francja</nazwa>
+      <stolica>
+         <nazwa>Paryż</nazwa>
+         <x>48.52N</x>
+         <y>2.21E</y>
+      </stolica>
+      <PKB>2421.5mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Biali</nazwa>
+            <liczność>89.4%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Włochy</nazwa>
+      <stolica>
+         <nazwa>Rzym</nazwa>
+         <x>41.53N</x>
+         <y>12.30E</y>
+      </stolica>
+      <PKB>1815.7mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Europejczycy</nazwa>
+            <liczność>77.5%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Kanada</nazwa>
+      <stolica>
+         <nazwa>Ottawa</nazwa>
+         <x>45.25N</x>
+         <y>75.42W</y>
+      </stolica>
+      <PKB>1788.7mld USD</PKB>
+      <region>A.Północna</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Europejczycy</nazwa>
+            <liczność>74.3%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Azjaci</nazwa>
+            <liczność>14.5%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Rosja</nazwa>
+      <stolica>
+         <nazwa>Moskwa</nazwa>
+         <x>55.45N</x>
+         <y>37.37E</y>
+      </stolica>
+      <PKB>1522.9mld USD</PKB>
+      <region>Azja</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Rosjanie</nazwa>
+            <liczność>81%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Tatarzy</nazwa>
+            <liczność>3.7%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Ukraincy</nazwa>
+            <liczność>1.4%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Korea Południowa</nazwa>
+      <stolica>
+         <nazwa>Seul</nazwa>
+         <x>37.33N</x>
+         <y>126E</y>
+      </stolica>
+      <PKB>1498.1mld USD</PKB>
+      <region>Azja</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Azjaci</nazwa>
+            <liczność>100%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Australia</nazwa>
+      <stolica>
+         <nazwa>Canberra</nazwa>
+         <x>35.18S</x>
+         <y>149.07E</y>
+      </stolica>
+      <PKB>1390mld USD</PKB>
+      <region>Australia</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Europejczycy</nazwa>
+            <liczność>93.7%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Hiszpania</nazwa>
+      <stolica>
+         <nazwa>Madryt</nazwa>
+         <x>40.25N</x>
+         <y>3.41W</y>
+      </stolica>
+      <PKB>1199.7mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Latynosi</nazwa>
+            <liczność>89.9%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Meksyk</nazwa>
+      <stolica>
+         <nazwa>Meksyk</nazwa>
+         <x>19.25N</x>
+         <y>99.08W</y>
+      </stolica>
+      <PKB>1142.5mld USD</PKB>
+      <region>A.Północna</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Latynosi</nazwa>
+            <liczność>89.4%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Polska</nazwa>
+      <stolica>
+         <nazwa>Warszawa</nazwa>
+         <x>52.13N</x>
+         <y>21.02E</y>
+      </stolica>
+      <PKB>482.9mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Polacy</nazwa>
+            <liczność>94.6%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Niemcy</nazwa>
+            <liczność>0.28%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Ukraincy</nazwa>
+            <liczność>0.12%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="chrzestPolski">
+               <nazwa>Chrzest Polski</nazwa>
+               <data dzień="6" miesiąc="Kwiecień" rok="996"/>
+            </wydarzenie>
+         </wydarzenie>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Austria</nazwa>
+      <stolica>
+         <nazwa>Wiedeń</nazwa>
+         <x>48.13N</x>
+         <y>16.22E</y>
+      </stolica>
+      <PKB>409.3mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Austriacy</nazwa>
+            <liczność>82.3%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Niemcy</nazwa>
+            <liczność>2.7%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Norwegia</nazwa>
+      <stolica>
+         <nazwa>Oslo</nazwa>
+         <x>59.54N</x>
+         <y>10.44E</y>
+      </stolica>
+      <PKB>389.4mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Europejczycy</nazwa>
+            <liczność>100%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Tajlandia</nazwa>
+      <stolica>
+         <nazwa>Bangkok</nazwa>
+         <x>13.45N</x>
+         <y>100.31E</y>
+      </stolica>
+      <PKB>387.2mld USD</PKB>
+      <region>Azja</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Thai</nazwa>
+            <liczność>34.1%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Południowa Afryka</nazwa>
+      <stolica>
+         <nazwa>Pretoria</nazwa>
+         <x>25.43S</x>
+         <y>28.14E</y>
+      </stolica>
+      <PKB>384.3mld USD</PKB>
+      <region>Afryka</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Czarni</nazwa>
+            <liczność>80.2%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Biali</nazwa>
+            <liczność>8.4%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Azjaci</nazwa>
+            <liczność>2.5%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Kolumbia</nazwa>
+      <stolica>
+         <nazwa>Bogota</nazwa>
+         <x>4.35N</x>
+         <y>74.04W</y>
+      </stolica>
+      <PKB>381.8mld USD</PKB>
+      <region>A.Południowa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Latynosi</nazwa>
+            <liczność>86%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Czarni</nazwa>
+            <liczność>10.6%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Zjednoczone Emiraty Arabskie</nazwa>
+      <stolica>
+         <nazwa>Abu Zabi</nazwa>
+         <x>24.27N</x>
+         <y>54.23E</y>
+      </stolica>
+      <PKB>345.4mld USD</PKB>
+      <region>Azja</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Hindusi</nazwa>
+            <liczność>50%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Pakistańczycy</nazwa>
+            <liczność>12.53%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Egipt</nazwa>
+      <stolica>
+         <nazwa>Kair</nazwa>
+         <x>30.03N</x>
+         <y>31.14E</y>
+      </stolica>
+      <PKB>330.8mld USD</PKB>
+      <region>Afryka</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Arabowie</nazwa>
+            <liczność>90%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Republika Czeska</nazwa>
+      <stolica>
+         <nazwa>Praga</nazwa>
+         <x>50.05N</x>
+         <y>14.25E</y>
+      </stolica>
+      <PKB>193.5mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Czesi</nazwa>
+            <liczność>64%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia>
+         <wydarzenie>
+            <wydarzenie id="drugaWojna">
+               <nazwa>Początek drugiej Wojny Światowej</nazwa>
+               <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+            </wydarzenie>
+         </wydarzenie>
+      </ważne-wydarzenia>
+   </kraj>
+   <kraj>
+      <nazwa>Ukraina</nazwa>
+      <stolica>
+         <nazwa>Kijów</nazwa>
+         <x>50.27N</x>
+         <y>30.30E</y>
+      </stolica>
+      <PKB>93.2mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Ukraincy</nazwa>
+            <liczność>77.8%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Rosjanie</nazwa>
+            <liczność>17.3%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Litwa</nazwa>
+      <stolica>
+         <nazwa>Wilno</nazwa>
+         <x>54.41N</x>
+         <y>25.17E</y>
+      </stolica>
+      <PKB>46.7mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Litwini</nazwa>
+            <liczność>86.7%</liczność>
+         </grupa-etniczna>
+         <grupa-etniczna>
+            <nazwa>Polacy</nazwa>
+            <liczność>5.6%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Korea Północna</nazwa>
+      <stolica>
+         <nazwa>Pjongjang</nazwa>
+         <x>39.01N</x>
+         <y>125.45E</y>
+      </stolica>
+      <PKB>28.5mld USD</PKB>
+      <region>Azja</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Azjaci</nazwa>
+            <liczność>100%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <kraj>
+      <nazwa>Watykan</nazwa>
+      <stolica>
+         <nazwa>Watykan</nazwa>
+         <x>42N</x>
+         <y>12E</y>
+      </stolica>
+      <PKB>0mld USD</PKB>
+      <region>Europa</region>
+      <grupy>
+         <grupa-etniczna>
+            <nazwa>Europejczycy</nazwa>
+            <liczność>100%</liczność>
+         </grupa-etniczna>
+      </grupy>
+      <ważne-wydarzenia/>
+   </kraj>
+   <regiony>
+      <region>
+         <id>Europa</id>
+         <krajów>12</krajów>
+         <średnie-pkb>1113.98</średnie-pkb>
+         <łączna-populacja>433097094</łączna-populacja>
+         <kraje>Polska, Niemcy, Republika Czeska, Francja, Watykan, Włochy, Norwegia, Austria, Wielka Brytania, Hiszpania, Ukraina, Litwa</kraje>
+      </region>
+      <region>
+         <id>A.Północna</id>
+         <krajów>3</krajów>
+         <średnie-pkb>6989.27</średnie-pkb>
+         <łączna-populacja>487361878</łączna-populacja>
+         <kraje>Stany Zjednoczone, Kanada, Meksyk</kraje>
+      </region>
+      <region>
+         <id>A.Południowa</id>
+         <krajów>1</krajów>
+         <średnie-pkb>381.80</średnie-pkb>
+         <łączna-populacja>47698524</łączna-populacja>
+         <kraje>Kolumbia</kraje>
+      </region>
+      <region>
+         <id>Azja</id>
+         <krajów>7</krajów>
+         <średnie-pkb>3105.97</średnie-pkb>
+         <łączna-populacja>1801819853</łączna-populacja>
+         <kraje>Rosja, Chiny, Zjednoczone Emiraty Arabskie, Japonia, Tajlandia, Korea Północna, Korea Południowa</kraje>
+      </region>
+      <region>
+         <id>Australia</id>
+         <krajów>1</krajów>
+         <średnie-pkb>1390.00</średnie-pkb>
+         <łączna-populacja>24511800</łączna-populacja>
+         <kraje>Australia</kraje>
+      </region>
+      <region>
+         <id>Afryka</id>
+         <krajów>2</krajów>
+         <średnie-pkb>357.55</średnie-pkb>
+         <łączna-populacja>151882624</łączna-populacja>
+         <kraje>Egipt, Południowa Afryka</kraje>
+      </region>
+   </regiony>
+   <grupy-etniczne>
+      <grupa-etniczna>
+         <nazwa>Polacy</nazwa>
+         <kraje>Polska, Litwa</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Niemcy</nazwa>
+         <kraje>Polska, Niemcy, Austria</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Rosjanie</nazwa>
+         <kraje>Rosja, Ukraina</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Ukraincy</nazwa>
+         <kraje>Polska, Rosja, Ukraina</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Żydzi</nazwa>
+         <kraje/>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Japończycy</nazwa>
+         <kraje>Japonia</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Koreańczycy</nazwa>
+         <kraje>Japonia</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Europejczycy</nazwa>
+         <kraje>Kanada, Watykan, Włochy, Norwegia, Australia</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Biali</nazwa>
+         <kraje>Stany Zjednoczone, Południowa Afryka, Francja, Wielka Brytania</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Czarni</nazwa>
+         <kraje>Stany Zjednoczone, Południowa Afryka, Wielka Brytania, Kolumbia</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Azjaci</nazwa>
+         <kraje>Stany Zjednoczone, Południowa Afryka, Kanada, Wielka Brytania, Korea Północna, Korea Południowa</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Latynosi</nazwa>
+         <kraje>Meksyk, Hiszpania, Kolumbia</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Han</nazwa>
+         <kraje>Chiny</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Tatarzy</nazwa>
+         <kraje>Rosja</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Pakistańczycy</nazwa>
+         <kraje>Zjednoczone Emiraty Arabskie</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Thai</nazwa>
+         <kraje>Tajlandia</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Arabowie</nazwa>
+         <kraje>Egipt</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Austriacy</nazwa>
+         <kraje>Austria</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Litwini</nazwa>
+         <kraje>Litwa</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Hindusi</nazwa>
+         <kraje>Zjednoczone Emiraty Arabskie</kraje>
+      </grupa-etniczna>
+      <grupa-etniczna>
+         <nazwa>Czesi</nazwa>
+         <kraje>Republika Czeska</kraje>
+      </grupa-etniczna>
+   </grupy-etniczne>
+   <wydarzenia>
+      <wydarzenie id="chrzestPolski">
+         <nazwa>Chrzest Polski</nazwa>
+         <data dzień="6" miesiąc="Kwiecień" rok="996"/>
+      </wydarzenie>
+      <wydarzenie id="drugaWojna">
+         <nazwa>Początek drugiej Wojny Światowej</nazwa>
+         <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+      </wydarzenie>
+      <wydarzenie id="deklaracjaNiepodległości">
+         <nazwa>Deklaracja niepodległosci Stanów Zjednoczonych</nazwa>
+         <data dzień="4" miesiąc="Lipiec" rok="1776"/>
+      </wydarzenie>
+      <wydarzenie id="zadanie1">
+         <nazwa>Oddanie pierwszego zadania z PKCK</nazwa>
+         <kiedy>2018-03-21</kiedy>
+      </wydarzenie>
+  </wydarzenia>
+</raport>
