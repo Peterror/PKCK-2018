@@ -18,17 +18,17 @@
 		</head>
 		<body>
 			<h1>Kraje XHTML 1.0 Strict</h1>
-			<h3>
+			<h4>
 				<xsl:value-of select="t:raport/t:streszczenie" />
-			</h3>
-			<p>Autorzy: </p>
+			</h4>
+			<h3>Autorzy: </h3>
 			<ul>
 				<xsl:for-each select="t:raport/t:autorzy/t:autor">
 					<li><xsl:value-of select="." /></li>
 				</xsl:for-each>			
 			</ul>
 			 
-			<h3>Kraje zawarte w XML'u</h3>
+			<h3>Kraje zawarte w XML'u:</h3>
 			<ul>
 				<xsl:for-each select="t:raport/t:kraj">
 				<li>
@@ -39,20 +39,56 @@
 				</li>
 				</xsl:for-each>
 			</ul>
+			<h3>Regiony zawarte w XML'u:</h3>
+			<ul>
+				<xsl:for-each select="t:raport/t:regiony/t:region">
+				<li>
+					<xsl:attribute name="title">Nazwa regionu: <xsl:value-of select="t:id" /></xsl:attribute>
+					<a href="#{generate-id(.)}">
+						<xsl:value-of select="t:id" />
+					</a>
+				</li>
+				</xsl:for-each>
+			</ul>
+			<h3>Grupy etniczne zawarte w XML'u:</h3>
+			<ul>
+				<xsl:for-each select="t:raport/t:grupy-etniczne/t:grupa-etniczna">
+				<li>
+					<xsl:attribute name="title">Nazwa grupy etnicznej: <xsl:value-of select="t:nazwa" /></xsl:attribute>
+					<a href="#{generate-id(.)}">
+						<xsl:value-of select="t:nazwa" />
+					</a>
+				</li>
+				</xsl:for-each>
+			</ul>
+			<h3>Wydarzenia zawarte w XML'u:</h3>
+			<ul>
+				<xsl:for-each select="t:raport/t:wydarzenia/t:wydarzenie">
+				<li>
+					<xsl:attribute name="title">Nazwa kraju: <xsl:value-of select="t:nazwa" /></xsl:attribute>
+					<a href="#{generate-id(.)}">
+						<xsl:value-of select="t:nazwa" />
+					</a>
+				</li>
+				</xsl:for-each>
+			</ul>
+			<h3>Dane:</h3>
 			 <xsl:apply-templates select="/t:raport/t:kraj" />
+			 <xsl:apply-templates select="/t:raport/t:regiony" />
+			 <xsl:apply-templates select="/t:raport/t:grupy-etniczne/t:grupa-etniczna" />
+			 <xsl:apply-templates select="/t:raport/t:wydarzenia/t:wydarzenie" />
 		</body>
 	</html>
 	</xsl:template>
 
 	<xsl:template match="/t:raport/t:kraj">
-		<table style="clear: both; margin: 3ex 2em; color: black; background-color: aliceblue;" border="1">
-			<xsl:attribute name="summary"><xsl:value-of select="concat(t:nazwa, '(', t:stolica/t:nazwa, ')')" /></xsl:attribute>
+		<table style="clear: both; margin: 3ex 2em; color: black; background-color: aliceblue; font-weight: bold;" border="2">
 			<tr><td><a name="{generate-id(.)}"></a>Nazwa kraju:</td><td style="text-align: right;"><xsl:value-of select="t:nazwa" /></td></tr>
 			<tr><td>Stolica:</td><td style="text-align: right;"><xsl:value-of select="t:stolica/t:nazwa" /></td><td style="text-align: right;"><xsl:value-of select="concat(t:stolica/t:x, ' ', t:stolica/t:y)" /></td></tr>
 			<tr><td>PKB:</td><td style="text-align: right;"><xsl:value-of select="t:PKB" /></td></tr>
 			<tr><td>Region:</td><td style="text-align: right;"><xsl:value-of select="t:region" /></td></tr>
 			<tr>
-				<td>Grupy etniczne:</td>
+				<td>Grupy etniczne w kraju:</td>
 			</tr>
 			<xsl:for-each select="t:grupy/t:grupa-etniczna">
 			<tr>
@@ -69,8 +105,37 @@
 			</xsl:for-each>
 		</table>
 	</xsl:template>
+
+	<xsl:template match="/t:raport/t:regiony/t:region">
+		<table style="clear: both; margin: 3ex 2em; color: black; background-color: cornsilk; font-weight: bold;" border="2">
+			<tr><td><a name="{generate-id(.)}"></a>Nazwa regionu:</td><td style="text-align: right;"><xsl:value-of select="t:id" /></td></tr>
+			<tr><td>Ilość krajów:</td><td style="text-align: right;"><xsl:value-of select="t:krajów" /></td></tr>
+			<tr><td>Średnie PKB:</td><td style="text-align: right;"><xsl:value-of select="t:średnie-pkb" /></td></tr>
+			<tr><td>Łączna populacja:</td><td style="text-align: right;"><xsl:value-of select="t:łączna-populacja" /></td></tr>
+			<tr><td>Kraje składowe:</td><td style="text-align: right;"><xsl:value-of select="t:kraje" /></td></tr>
+		</table>
+	</xsl:template>
 	
-	<xsl:template match="t:wydarzenie/t:data">
+	<xsl:template match="/t:raport/t:wydarzenia/t:wydarzenie">
+		<table style="clear: both; margin: 3ex 2em; color: black; background-color: thistle; font-weight: bold;" border="2">
+			<tr><td><a name="{generate-id(.)}"></a>Nazwa wydarzenia:</td><td style="text-align: right;"><xsl:value-of select="t:nazwa" /></td></tr>
+			<tr><td>Data wydarzenia:</td><td style="text-align: right;">
+				<xsl:value-of select="concat(t:data/@dzień, ' ', t:data/@miesiąc, ' ', t:data/@rok)" />
+				<xsl:value-of select="t:kiedy" />
+			</td></tr>
+		</table>
+	</xsl:template>
+	
+	<xsl:template match="/t:raport/t:grupy-etniczne/t:grupa-etniczna">
+		<table style="clear: both; margin: 3ex 2em; color: black; background-color: thistle; font-weight: bold;" border="2">
+			<tr><td><a name="{generate-id(.)}"></a>Nazwa grupy etnicznej:</td><td style="text-align: right;"><xsl:value-of select="t:nazwa" /></td></tr>
+			<tr><td>Występuje w krajach:</td><td style="text-align: right;">
+				<xsl:value-of select="t:kraje" />
+			</td></tr>
+		</table>
+	</xsl:template>
+	
+	<xsl:template match="t:data">
 		<xsl:value-of select="concat(@dzień, ' ', @miesiąc, ' ', @rok)" />
 	</xsl:template>
 
