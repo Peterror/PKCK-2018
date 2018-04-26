@@ -127,7 +127,7 @@
 	</xsl:template>
 	
 	<xsl:template match="/t:raport/t:grupy-etniczne/t:grupa-etniczna">
-		<table style="clear: both; margin: 3ex 2em; color: black; background-color: thistle; font-weight: bold;" border="2">
+		<table style="clear: both; margin: 3ex 2em; color: black; background-color: honeydew; font-weight: bold;" border="2">
 			<tr><td><a name="{generate-id(.)}"></a>Nazwa grupy etnicznej:</td><td style="text-align: right;"><xsl:value-of select="t:nazwa" /></td></tr>
 			<tr><td>Występuje w krajach:</td><td style="text-align: right;">
 				<xsl:value-of select="t:kraje" />
