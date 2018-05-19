@@ -1,0 +1,447 @@
+
+	Kraje
+	=====
+		
+      Dokument ten zawiera informacje na temat wybranych krajów świata. Dla każdego z zawartych krajów umieszczone
+      zostały informacje o: stolicy i jej współrzędnych geograficznych, podziału na grupy etniczne i 
+      strefy czasowe. Dodatkowo informacje o populacji, PKB, walucie oraz regionie
+      zostały przypisane do każdego państwa. Przechowywana jest też informacja na temat ważnych wydarzeń
+      oraz krajów których one dotyczyły
+    
+
+		## Autorzy: 
+			
+				### Piotr Zieliński, nr indeksu: 204037
+				### Łukasz Pierścieniewski, nr indeksu: 203967			
+
+		## Kraje zawarte w XML'u:
+			
+				### Stany Zjednoczone
+				### Chiny
+				### Japonia
+				### Niemcy
+				### Wielka Brytania
+				### Francja
+				### Włochy
+				### Kanada
+				### Rosja
+				### Korea Południowa
+				### Australia
+				### Hiszpania
+				### Meksyk
+				### Polska
+				### Austria
+				### Norwegia
+				### Tajlandia
+				### Południowa Afryka
+				### Kolumbia
+				### Zjednoczone Emiraty Arabskie
+				### Egipt
+				### Republika Czeska
+				### Ukraina
+				### Litwa
+				### Korea Północna
+				### Watykan
+			
+		## Regiony zawarte w XML'u:
+			
+				### Europa
+				### A.Północna
+				### A.Południowa
+				### Azja
+				### Australia
+				### Afryka
+			
+		## Grupy etniczne zawarte w XML'u:
+			 
+				### Polacy 
+				### Niemcy 
+				### Rosjanie 
+				### Ukraincy 
+				### Żydzi 
+				### Japończycy 
+				### Koreańczycy 
+				### Europejczycy 
+				### Biali 
+				### Czarni 
+				### Azjaci 
+				### Latynosi 
+				### Han 
+				### Tatarzy 
+				### Pakistańczycy 
+				### Thai 
+				### Arabowie 
+				### Austriacy 
+				### Litwini 
+				### Hindusi 
+				### Czesi
+		
+		## Wydarzenia zawarte w XML'u:
+			
+				### Chrzest Polski
+				### Początek drugiej Wojny Światowej
+				### Deklaracja niepodległosci Stanów Zjednoczonych
+				### Oddanie pierwszego zadania z PKCK
+
+		## Dane:
+		
+			### Kraje:
+			
+				Nazwa kraju: Stany Zjednoczone
+				Stolica: Waszyngton (38.53N 77.02W)
+				PKB: 18036.6mld USD
+				Region: A.Północna
+				Grupy etniczne w kraju:
+					Biali (77.1%)
+					Czarni (13.3%)
+					Azjaci (5.6%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+					Deklaracja niepodległosci Stanów Zjednoczonych - 4 Lipiec 1776
+				
+				Nazwa kraju: Chiny
+				Stolica: Pekin (39.55N 116.23E)
+				PKB: 13118.7mld USD
+				Region: Azja
+				Grupy etniczne w kraju:
+					Han (91.51%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Japonia
+				Stolica: Tokio (35.68N 139.77E)
+				PKB: 4841mld USD
+				Region: Azja
+				Grupy etniczne w kraju:
+					Japończycy (98.5%)
+					Koreańczycy (0.5%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Niemcy
+				Stolica: Berlin (52.31N 12.24E)
+				PKB: 3466.6mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Niemcy (80.8%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Wielka Brytania
+				Stolica: Londyn (51.30N 0.07W)
+				PKB: 2849.3mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Biali (87.1%)
+					Azjaci (7.0%)
+					Czarni (3.0%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Francja
+				Stolica: Paryż (48.52N 2.21E)
+				PKB: 2421.5mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Biali (89.4%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Włochy
+				Stolica: Rzym (41.53N 12.30E)
+				PKB: 1815.7mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Europejczycy (77.5%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Kanada
+				Stolica: Ottawa (45.25N 75.42W)
+				PKB: 1788.7mld USD
+				Region: A.Północna
+				Grupy etniczne w kraju:
+					Europejczycy (74.3%)
+					Azjaci (14.5%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Rosja
+				Stolica: Moskwa (55.45N 37.37E)
+				PKB: 1522.9mld USD
+				Region: Azja
+				Grupy etniczne w kraju:
+					Rosjanie (81%)
+					Tatarzy (3.7%)
+					Ukraincy (1.4%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Korea Południowa
+				Stolica: Seul (37.33N 126E)
+				PKB: 1498.1mld USD
+				Region: Azja
+				Grupy etniczne w kraju:
+					Azjaci (100%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Australia
+				Stolica: Canberra (35.18S 149.07E)
+				PKB: 1390mld USD
+				Region: Australia
+				Grupy etniczne w kraju:
+					Europejczycy (93.7%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Hiszpania
+				Stolica: Madryt (40.25N 3.41W)
+				PKB: 1199.7mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Latynosi (89.9%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Meksyk
+				Stolica: Meksyk (19.25N 99.08W)
+				PKB: 1142.5mld USD
+				Region: A.Północna
+				Grupy etniczne w kraju:
+					Latynosi (89.4%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Polska
+				Stolica: Warszawa (52.13N 21.02E)
+				PKB: 482.9mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Polacy (94.6%)
+					Niemcy (0.28%)
+					Ukraincy (0.12%)
+				Ważne wydarzenia:
+					Chrzest Polski - 6 Kwiecień 996
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Austria
+				Stolica: Wiedeń (48.13N 16.22E)
+				PKB: 409.3mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Austriacy (82.3%)
+					Niemcy (2.7%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Norwegia
+				Stolica: Oslo (59.54N 10.44E)
+				PKB: 389.4mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Europejczycy (100%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Tajlandia
+				Stolica: Bangkok (13.45N 100.31E)
+				PKB: 387.2mld USD
+				Region: Azja
+				Grupy etniczne w kraju:
+					Thai (34.1%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Południowa Afryka
+				Stolica: Pretoria (25.43S 28.14E)
+				PKB: 384.3mld USD
+				Region: Afryka
+				Grupy etniczne w kraju:
+					Czarni (80.2%)
+					Biali (8.4%)
+					Azjaci (2.5%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Kolumbia
+				Stolica: Bogota (4.35N 74.04W)
+				PKB: 381.8mld USD
+				Region: A.Południowa
+				Grupy etniczne w kraju:
+					Latynosi (86%)
+					Czarni (10.6%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Zjednoczone Emiraty Arabskie
+				Stolica: Abu Zabi (24.27N 54.23E)
+				PKB: 345.4mld USD
+				Region: Azja
+				Grupy etniczne w kraju:
+					Hindusi (50%)
+					Pakistańczycy (12.53%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Egipt
+				Stolica: Kair (30.03N 31.14E)
+				PKB: 330.8mld USD
+				Region: Afryka
+				Grupy etniczne w kraju:
+					Arabowie (90%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Republika Czeska
+				Stolica: Praga (50.05N 14.25E)
+				PKB: 193.5mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Czesi (64%)
+				Ważne wydarzenia:
+					Początek drugiej Wojny Światowej - 1 Wrzesień 1939
+				
+				Nazwa kraju: Ukraina
+				Stolica: Kijów (50.27N 30.30E)
+				PKB: 93.2mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Ukraincy (77.8%)
+					Rosjanie (17.3%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Litwa
+				Stolica: Wilno (54.41N 25.17E)
+				PKB: 46.7mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Litwini (86.7%)
+					Polacy (5.6%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Korea Północna
+				Stolica: Pjongjang (39.01N 125.45E)
+				PKB: 28.5mld USD
+				Region: Azja
+				Grupy etniczne w kraju:
+					Azjaci (100%)
+				Ważne wydarzenia:
+				
+				Nazwa kraju: Watykan
+				Stolica: Watykan (42N 12E)
+				PKB: 0mld USD
+				Region: Europa
+				Grupy etniczne w kraju:
+					Europejczycy (100%)
+				Ważne wydarzenia:
+				
+			### Regiony:
+      
+				Nazwa regionu: Europa
+				Ilość krajów: 12
+				Średnie PKB: 1113.98
+				Łączna populacja: 433097094
+				Kraje składowe: Polska, Niemcy, Republika Czeska, Francja, Watykan, Włochy, Norwegia, Austria, Wielka Brytania, Hiszpania, Ukraina, Litwa
+      
+				Nazwa regionu: A.Północna
+				Ilość krajów: 3
+				Średnie PKB: 6989.27
+				Łączna populacja: 487361878
+				Kraje składowe: Stany Zjednoczone, Kanada, Meksyk
+      
+				Nazwa regionu: A.Południowa
+				Ilość krajów: 1
+				Średnie PKB: 381.80
+				Łączna populacja: 47698524
+				Kraje składowe: Kolumbia
+      
+				Nazwa regionu: Azja
+				Ilość krajów: 7
+				Średnie PKB: 3105.97
+				Łączna populacja: 1801819853
+				Kraje składowe: Rosja, Chiny, Zjednoczone Emiraty Arabskie, Japonia, Tajlandia, Korea Północna, Korea Południowa
+      
+				Nazwa regionu: Australia
+				Ilość krajów: 1
+				Średnie PKB: 1390.00
+				Łączna populacja: 24511800
+				Kraje składowe: Australia
+      
+				Nazwa regionu: Afryka
+				Ilość krajów: 2
+				Średnie PKB: 357.55
+				Łączna populacja: 151882624
+				Kraje składowe: Egipt, Południowa Afryka
+   
+		 
+			### Grupy etniczne:
+		
+				Nazwa grupy etnicznej:Polacy
+				Występuje w krajach: Polska, Litwa
+				
+				Nazwa grupy etnicznej:Niemcy
+				Występuje w krajach: Polska, Niemcy, Austria
+				
+				Nazwa grupy etnicznej:Rosjanie
+				Występuje w krajach: Rosja, Ukraina
+				
+				Nazwa grupy etnicznej:Ukraincy
+				Występuje w krajach: Polska, Rosja, Ukraina
+				
+				Nazwa grupy etnicznej:Żydzi
+				Występuje w krajach: 
+				
+				Nazwa grupy etnicznej:Japończycy
+				Występuje w krajach: Japonia
+				
+				Nazwa grupy etnicznej:Koreańczycy
+				Występuje w krajach: Japonia
+				
+				Nazwa grupy etnicznej:Europejczycy
+				Występuje w krajach: Kanada, Watykan, Włochy, Norwegia, Australia
+				
+				Nazwa grupy etnicznej:Biali
+				Występuje w krajach: Stany Zjednoczone, Południowa Afryka, Francja, Wielka Brytania
+				
+				Nazwa grupy etnicznej:Czarni
+				Występuje w krajach: Stany Zjednoczone, Południowa Afryka, Wielka Brytania, Kolumbia
+				
+				Nazwa grupy etnicznej:Azjaci
+				Występuje w krajach: Stany Zjednoczone, Południowa Afryka, Kanada, Wielka Brytania, Korea Północna, Korea Południowa
+				
+				Nazwa grupy etnicznej:Latynosi
+				Występuje w krajach: Meksyk, Hiszpania, Kolumbia
+				
+				Nazwa grupy etnicznej:Han
+				Występuje w krajach: Chiny
+				
+				Nazwa grupy etnicznej:Tatarzy
+				Występuje w krajach: Rosja
+				
+				Nazwa grupy etnicznej:Pakistańczycy
+				Występuje w krajach: Zjednoczone Emiraty Arabskie
+				
+				Nazwa grupy etnicznej:Thai
+				Występuje w krajach: Tajlandia
+				
+				Nazwa grupy etnicznej:Arabowie
+				Występuje w krajach: Egipt
+				
+				Nazwa grupy etnicznej:Austriacy
+				Występuje w krajach: Austria
+				
+				Nazwa grupy etnicznej:Litwini
+				Występuje w krajach: Litwa
+				
+				Nazwa grupy etnicznej:Hindusi
+				Występuje w krajach: Zjednoczone Emiraty Arabskie
+				
+				Nazwa grupy etnicznej:Czesi
+				Występuje w krajach: Republika Czeska
+				
+		 
+			### Wydarzenia:
+		
+					Nazwa wydarzenia: Chrzest Polski
+					Data wydarzenia: 6 Kwiecień 996
+					
+					Nazwa wydarzenia: Początek drugiej Wojny Światowej
+					Data wydarzenia: 1 Wrzesień 1939
+					
+					Nazwa wydarzenia: Deklaracja niepodległosci Stanów Zjednoczonych
+					Data wydarzenia: 4 Lipiec 1776
+					
+					Nazwa wydarzenia: Oddanie pierwszego zadania z PKCK
+					Data wydarzenia:   2018-03-21
+					
