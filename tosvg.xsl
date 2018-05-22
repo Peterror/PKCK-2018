@@ -15,7 +15,7 @@
   <xsl:template match="/">
     <xsl:variable name="svg_width" select="400"/>
     <xsl:variable name="svg_height" select="300"/>
-    <s:svg width="1500" height="50000">
+    <s:svg width="1500" height="7000">
       <style type="text/css">
         .bar {
         fill: red;
