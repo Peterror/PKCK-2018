@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="style.css" type="text/css"?>
+<dokument xmlns="file://root.zadanie2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="schema.xsd">
+
+  <meta:opis xmlns:meta="file://root.zadanie2/meta">
+    <meta:autorzy>
+      <meta:autor index="204037">Piotr Zieliński</meta:autor>
+      <meta:autor index="203967">Łukasz Pierścieniewski</meta:autor>
+    </meta:autorzy>
+    <meta:streszczenie>
+      Dokument ten zawiera informacje na temat wybranych krajów świata. Dla każdego z zawartych krajów umieszczone
+      zostały informacje o: stolicy i jej współrzędnych geograficznych, podziału na grupy etniczne i 
+      strefy czasowe. Dodatkowo informacje o populacji, PKB, walucie oraz regionie
+      zostały przypisane do każdego państwa. Przechowywana jest też informacja na temat ważnych wydarzeń
+      oraz krajów których one dotyczyły
+    </meta:streszczenie>
+  </meta:opis>
+
+  <!--Tutaj lista krajów -->
+  <kraje>
+    <kraj>
+      <nazwa>Polska</nazwa>
+      <stolica>
+        <nazwa>Warszawa</nazwa>
+        <współrzędne>
+          <wysokość typ="N">52.13</wysokość>
+          <szerokość typ="E">21.02</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Polacy" wartość="94.6"/>
+        <grupa-etniczna jednostka="%" idref="Niemcy" wartość="0.28"/>
+        <grupa-etniczna jednostka="%" idref="Ukraincy" wartość="0.12"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="chrzestPolski"/>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">38422346</populacja>
+      <PKB waluta="USD" jednostka="mld">482.9</PKB>
+      <waluta>PLN</waluta>
+      <region idref="Europa"/>
+    </kraj>
+
+    <kraj>
+      <nazwa>Niemcy</nazwa>
+      <stolica>
+        <nazwa>Berlin</nazwa>
+        <współrzędne>
+          <wysokość typ="N">52.31</wysokość>
+          <szerokość typ="E">12.24</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Niemcy" wartość="80.8"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">82349400</populacja>
+      <PKB waluta="USD" jednostka="mld">3466.6</PKB>
+      <waluta>EUR</waluta>
+      <region idref="Europa"/>
+    </kraj>
+
+	  <kraj>
+      <nazwa>Stany Zjednoczone</nazwa>
+      <stolica>
+        <nazwa>Waszyngton</nazwa>
+        <współrzędne>
+          <wysokość typ="N">38.53</wysokość>
+          <szerokość typ="W">77.02</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Biali" wartość="77.1"/>
+        <grupa-etniczna jednostka="%" idref="Czarni" wartość="13.3"/>
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="5.6"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="4" znak="m"/>
+        <strefa-czasowa wartość="6" znak="m"/>
+        <strefa-czasowa wartość="7" znak="m"/>
+        <strefa-czasowa wartość="8" znak="m"/>
+        <strefa-czasowa wartość="9" znak="m"/>
+        <strefa-czasowa wartość="10" znak="m"/>
+        <strefa-czasowa wartość="11" znak="m"/>
+        <strefa-czasowa wartość="12" znak="m"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+        <ważne-wydarzenie id="deklaracjaNiepodległości"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">326079000</populacja>
+      <PKB waluta="USD" jednostka="mld">18036.6</PKB>
+      <waluta>USD</waluta>
+      <region idref="A.Północna"/>
+    </kraj>
+    <kraj>
+      <nazwa>Republika Czeska</nazwa>
+      <stolica>
+        <nazwa>Praga</nazwa>
+        <współrzędne>
+          <wysokość typ="N">50.05</wysokość>
+          <szerokość typ="E">14.25</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Czesi" wartość="64"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">10541466</populacja>
+      <PKB waluta="USD" jednostka="mld">193.5</PKB>
+      <waluta>CZK</waluta>
+      <region idref="Europa"/>
+    </kraj>
+	  <kraj>
+      <nazwa>Rosja</nazwa>
+      <stolica>
+        <nazwa>Moskwa</nazwa>
+        <współrzędne>
+          <wysokość typ="N">55.45</wysokość>
+          <szerokość typ="E">37.37</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Rosjanie" wartość="81"/>
+        <grupa-etniczna jednostka="%" idref="Tatarzy" wartość="3.7"/>
+        <grupa-etniczna jednostka="%" idref="Ukraincy" wartość="1.4"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="2" znak="p"/>
+        <strefa-czasowa wartość="3" znak="p"/>
+        <strefa-czasowa wartość="4" znak="p"/>
+        <strefa-czasowa wartość="5" znak="p"/>
+        <strefa-czasowa wartość="6" znak="p"/>
+        <strefa-czasowa wartość="7" znak="p"/>
+        <strefa-czasowa wartość="8" znak="p"/>
+        <strefa-czasowa wartość="9" znak="p"/>
+        <strefa-czasowa wartość="10" znak="p"/>
+        <strefa-czasowa wartość="11" znak="p"/>
+        <strefa-czasowa wartość="12" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">146877088</populacja>
+      <PKB waluta="USD" jednostka="mld">1522.9</PKB>
+      <waluta>RUB</waluta>
+      <region idref="Azja"/>
+    </kraj>
+    <kraj>
+      <nazwa>Chiny</nazwa>
+      <stolica>
+        <nazwa>Pekin</nazwa>
+        <współrzędne>
+          <wysokość typ="N">39.55</wysokość>
+          <szerokość typ="E">116.23</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Han" wartość="91.51"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="8" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">1379302771</populacja>
+      <PKB waluta="USD" jednostka="mld">13118.7</PKB>
+      <waluta>CNY</waluta>
+      <region idref="Azja"/>
+    </kraj>
+    <kraj>
+      <nazwa>Zjednoczone Emiraty Arabskie</nazwa>
+      <stolica>
+        <nazwa>Abu Zabi</nazwa>
+        <współrzędne>
+          <wysokość typ="N">24.27</wysokość>
+          <szerokość typ="E">54.23</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Hindusi" wartość="50"/>
+        <grupa-etniczna jednostka="%" idref="Pakistańczycy" wartość="12.53"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="4" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">5927482</populacja>
+      <PKB waluta="USD" jednostka="mld">345.4</PKB>
+      <waluta>AED</waluta>
+      <region idref="Azja"/>
+    </kraj>
+    <kraj>
+      <nazwa>Egipt</nazwa>
+      <stolica>
+        <nazwa>Kair</nazwa>
+        <współrzędne>
+          <wysokość typ="N">30.03</wysokość>
+          <szerokość typ="E">31.14</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Arabowie" wartość="90"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="2" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">97041072</populacja>
+      <PKB waluta="USD" jednostka="mld">330.8</PKB>
+      <waluta>EGP</waluta>
+      <region idref="Afryka"/>
+    </kraj>
+    <kraj>
+      <nazwa>Południowa Afryka</nazwa>
+      <stolica>
+        <nazwa>Pretoria</nazwa>
+        <współrzędne>
+          <wysokość typ="S">25.43</wysokość>
+          <szerokość typ="E">28.14</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Czarni" wartość="80.2"/>
+        <grupa-etniczna jednostka="%" idref="Biali" wartość="8.4"/>
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="2.5"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="2" znak="p"/>
+      </strefy-czasowe>
+      <populacja jednostka="osoba">54841552</populacja>
+      <PKB waluta="USD" jednostka="mld">384.3</PKB>
+      <waluta>ZAR</waluta>
+      <region idref="Afryka"/>
+    </kraj>
+    <kraj>
+      <nazwa>Francja</nazwa>
+      <stolica>
+        <nazwa>Paryż</nazwa>
+        <współrzędne>
+          <wysokość typ="N">48.52</wysokość>
+          <szerokość typ="E">2.21</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Biali" wartość="89.4"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">67158000</populacja>
+      <PKB waluta="USD" jednostka="mld">2421.5</PKB>
+      <waluta>EUR</waluta>
+      <region idref="Europa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Kanada</nazwa>
+      <stolica>
+        <nazwa>Ottawa</nazwa>
+        <współrzędne>
+          <wysokość typ="N">45.25</wysokość>
+          <szerokość typ="W">75.42</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="74.3"/>
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="14.5"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="3" znak="m"/>
+        <strefa-czasowa wartość="4" znak="m"/>
+        <strefa-czasowa wartość="5" znak="m"/>
+        <strefa-czasowa wartość="6" znak="m"/>
+        <strefa-czasowa wartość="7" znak="m"/>
+        <strefa-czasowa wartość="8" znak="m"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">36708083</populacja>
+      <PKB waluta="USD" jednostka="mld">1788.7</PKB>
+      <waluta>CAD</waluta>
+      <region idref="A.Północna"/>
+    </kraj>
+    <kraj>
+      <nazwa>Meksyk</nazwa>
+      <stolica>
+        <nazwa>Meksyk</nazwa>
+        <współrzędne>
+          <wysokość typ="N">19.25</wysokość>
+          <szerokość typ="W">99.08</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Latynosi" wartość="89.4"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="5" znak="m"/>
+        <strefa-czasowa wartość="6" znak="m"/>
+        <strefa-czasowa wartość="7" znak="m"/>
+        <strefa-czasowa wartość="8" znak="m"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">124574795</populacja>
+      <PKB waluta="USD" jednostka="mld">1142.5</PKB>
+      <waluta>MXN</waluta>
+      <region idref="A.Północna"/>
+    </kraj>
+    <kraj>
+      <nazwa>Watykan</nazwa>
+      <stolica>
+        <nazwa>Watykan</nazwa>
+        <współrzędne>
+          <wysokość typ="N">42</wysokość>
+          <szerokość typ="E">12</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="100"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">1000</populacja>
+      <PKB waluta="USD" jednostka="mld">0</PKB>
+      <waluta>EUR</waluta>
+      <region idref="Europa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Włochy</nazwa>
+      <stolica>
+        <nazwa>Rzym</nazwa>
+        <współrzędne>
+          <wysokość typ="N">41.53</wysokość>
+          <szerokość typ="E">12.30</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="77.5"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">60788140</populacja>
+      <PKB waluta="USD" jednostka="mld">1815.7</PKB>
+      <waluta>EUR</waluta>
+      <region idref="Europa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Norwegia</nazwa>
+      <stolica>
+        <nazwa>Oslo</nazwa>
+        <współrzędne>
+          <wysokość typ="N">59.54</wysokość>
+          <szerokość typ="E">10.44</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="100"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">5214900</populacja>
+      <PKB waluta="USD" jednostka="mld">389.4</PKB>
+      <waluta>NOK</waluta>
+      <region idref="Europa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Australia</nazwa>
+      <stolica>
+        <nazwa>Canberra</nazwa>
+        <współrzędne>
+          <wysokość typ="S">35.18</wysokość>
+          <szerokość typ="E">149.07</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Europejczycy" wartość="93.7"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="8" znak="p"/>
+        <strefa-czasowa wartość="9" znak="p"/>
+        <strefa-czasowa wartość="10" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">24511800</populacja>
+      <PKB waluta="USD" jednostka="mld">1390</PKB>
+      <waluta>AUD</waluta>
+      <region idref="Australia"/>
+    </kraj>
+    <kraj>
+      <nazwa>Austria</nazwa>
+      <stolica>
+        <nazwa>Wiedeń</nazwa>
+        <współrzędne>
+          <wysokość typ="N">48.13</wysokość>
+          <szerokość typ="E">16.22</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Austriacy" wartość="82.3"/>
+        <grupa-etniczna jednostka="%" idref="Niemcy" wartość="2.7"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">8772865</populacja>
+      <PKB waluta="USD" jednostka="mld">409.3</PKB>
+      <waluta>EUR</waluta>
+      <region idref="Europa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Japonia</nazwa>
+      <stolica>
+        <nazwa>Tokio</nazwa>
+        <współrzędne>
+          <wysokość typ="N">35.68</wysokość>
+          <szerokość typ="E">139.77</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Japończycy" wartość="98.5"/>
+        <grupa-etniczna jednostka="%" idref="Koreańczycy" wartość="0.5"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="9" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">126451398</populacja>
+      <PKB waluta="USD" jednostka="mld">4841</PKB>
+      <waluta>JPY</waluta>
+      <region idref="Azja"/>
+    </kraj>
+    <kraj>
+      <nazwa>Tajlandia</nazwa>
+      <stolica>
+        <nazwa>Bangkok</nazwa>
+        <współrzędne>
+          <wysokość typ="N">13.45</wysokość>
+          <szerokość typ="E">100.31</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Thai" wartość="34.1"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="7" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">67091089</populacja>
+      <PKB waluta="USD" jednostka="mld">387.2</PKB>
+      <waluta>THB</waluta>
+      <region idref="Azja"/>
+    </kraj>
+    <kraj>
+      <nazwa>Wielka Brytania</nazwa>
+      <stolica>
+        <nazwa>Londyn</nazwa>
+        <współrzędne>
+          <wysokość typ="N">51.30</wysokość>
+          <szerokość typ="W">0.07</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Biali" wartość="87.1"/>
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="7.0"/>
+        <grupa-etniczna jednostka="%" idref="Czarni" wartość="3.0"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="0" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+        <ważne-wydarzenie id="drugaWojna"/>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">65648100</populacja>
+      <PKB waluta="USD" jednostka="mld">2849.3</PKB>
+      <waluta>GBP</waluta>
+      <region idref="Europa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Hiszpania</nazwa>
+      <stolica>
+        <nazwa>Madryt</nazwa>
+        <współrzędne>
+          <wysokość typ="N">40.25</wysokość>
+          <szerokość typ="W">3.41</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Latynosi" wartość="89.9"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="1" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">48563476</populacja>
+      <PKB waluta="USD" jednostka="mld">1199.7</PKB>
+      <waluta>EUR</waluta>
+      <region idref="Europa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Kolumbia</nazwa>
+      <stolica>
+        <nazwa>Bogota</nazwa>
+        <współrzędne>
+          <wysokość typ="N">4.35</wysokość>
+          <szerokość typ="W">74.04</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Latynosi" wartość="86"/>
+        <grupa-etniczna jednostka="%" idref="Czarni" wartość="10.6"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="5" znak="m"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">47698524</populacja>
+      <PKB waluta="USD" jednostka="mld">381.8</PKB>
+      <waluta>COP</waluta>
+      <region idref="A.Południowa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Ukraina</nazwa>
+      <stolica>
+        <nazwa>Kijów</nazwa>
+        <współrzędne>
+          <wysokość typ="N">50.27</wysokość>
+          <szerokość typ="E">30.30</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Ukraincy" wartość="77.8"/>
+        <grupa-etniczna jednostka="%" idref="Rosjanie" wartość="17.3"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="2" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">42805731</populacja>
+      <PKB waluta="USD" jednostka="mld">93.2</PKB>
+      <waluta>UAH</waluta>
+      <region idref="Europa"/>
+    </kraj>
+    <kraj>
+      <nazwa>Litwa</nazwa>
+      <stolica>
+        <nazwa>Wilno</nazwa>
+        <współrzędne>
+          <wysokość typ="N">54.41</wysokość>
+          <szerokość typ="E">25.17</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Litwini" wartość="86.7"/>
+        <grupa-etniczna jednostka="%" idref="Polacy" wartość="5.6"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="2" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">2831670</populacja>
+      <PKB waluta="USD" jednostka="mld">46.7</PKB>
+      <waluta>EUR</waluta>
+      <region idref="Europa"/>
+    </kraj>    
+	<kraj>
+      <nazwa>Korea Północna</nazwa>
+      <stolica>
+        <nazwa>Pjongjang</nazwa>
+        <współrzędne>
+          <wysokość typ="N">39.01</wysokość>
+          <szerokość typ="E">125.45</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="100"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="8.5" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">25368620</populacja>
+      <PKB waluta="USD" jednostka="mld">28.5</PKB>
+      <waluta>KPW</waluta>
+      <region idref="Azja"/>
+    </kraj>    
+	<kraj>
+      <nazwa>Korea Południowa</nazwa>
+      <stolica>
+        <nazwa>Seul</nazwa>
+        <współrzędne>
+          <wysokość typ="N">37.33</wysokość>
+          <szerokość typ="E">126</szerokość>
+        </współrzędne>
+      </stolica>
+      <grupy-etniczne>
+        <grupa-etniczna jednostka="%" idref="Azjaci" wartość="100"/>
+      </grupy-etniczne>
+      <strefy-czasowe>
+        <strefa-czasowa wartość="8.5" znak="p"/>
+      </strefy-czasowe>
+      <ważne-wydarzenia>
+      </ważne-wydarzenia>
+      <populacja jednostka="osoba">50801405</populacja>
+      <PKB waluta="USD" jednostka="mld">1498.1</PKB>
+      <waluta>KRW</waluta>
+      <region idref="Azja"/>
+    </kraj>
+  </kraje>
+  <!--Tutaj lista regionów-->
+  <regiony>
+    <region id="Europa"/>
+    <region id="A.Północna"/>
+    <region id="A.Południowa"/>
+    <region id="Azja"/>
+    <region id="Australia"/>
+    <region id="Afryka"/>
+  </regiony>
+
+  <!--Tutaj grupy etniczne-->
+  <grupy-etniczne>
+    <grupa-etniczna id="Polacy"/>
+    <grupa-etniczna id="Niemcy"/>
+    <grupa-etniczna id="Rosjanie"/>
+    <grupa-etniczna id="Ukraincy"/>
+    <grupa-etniczna id="Żydzi"/>
+    <grupa-etniczna id="Japończycy"/>
+    <grupa-etniczna id="Koreańczycy"/>
+    <grupa-etniczna id="Europejczycy"/>
+    <grupa-etniczna id="Biali"/>
+    <grupa-etniczna id="Czarni"/>
+    <grupa-etniczna id="Azjaci"/>
+    <grupa-etniczna id="Latynosi"/>
+    <grupa-etniczna id="Han"/>
+    <grupa-etniczna id="Tatarzy"/>
+    <grupa-etniczna id="Pakistańczycy"/>
+    <grupa-etniczna id="Thai"/>
+    <grupa-etniczna id="Arabowie"/>
+    <grupa-etniczna id="Austriacy"/>
+    <grupa-etniczna id="Litwini"/>
+    <grupa-etniczna id="Hindusi"/>
+    <grupa-etniczna id="Czesi"/>
+  </grupy-etniczne>
+
+  <!--Tutaj wydarzenia do podlinkowania-->
+  <wydarzenia>
+    <wydarzenie id="chrzestPolski">
+      <nazwa>Chrzest Polski</nazwa>
+      <data dzień="14" miesiąc="Kwiecień" rok="996"/>
+    </wydarzenie>
+    <wydarzenie id="drugaWojna">
+      <nazwa>Początek drugiej Wojny Światowej</nazwa>
+      <data dzień="1" miesiąc="Wrzesień" rok="1939"/>
+    </wydarzenie>
+    <wydarzenie id="deklaracjaNiepodległości">
+      <nazwa>Deklaracja niepodległosci Stanów Zjednoczonych</nazwa>
+      <data dzień="4" miesiąc="Lipiec" rok="1776"/>
+    </wydarzenie>
+    <wydarzenie id="zadanie1">
+      <nazwa>Oddanie pierwszego zadania z PKCK</nazwa>
+      <kiedy>2018-03-21</kiedy>
+    </wydarzenie>
+  </wydarzenia>
+</dokument>

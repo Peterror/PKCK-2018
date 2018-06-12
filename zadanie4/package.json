@@ -1,0 +1,21 @@
+{
+  "name": "zadanie4",
+  "version": "1.0.0",
+  "description": "Zadanie 4 w elektronie",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "libxmljs": "^0.18.9-pre0",
+    "popper.js": "^1.14.3"
+  }
+}

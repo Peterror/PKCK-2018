@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="file://root.zadanie2/meta"
+    targetNamespace="file://root.zadanie2/meta"
+    elementFormDefault="qualified">
+
+    <xsd:complexType name="autorTyp">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="index" type="autorIndex" />
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:simpleType name="autorIndex">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="100000" />
+            <xsd:maxExclusive value="1000000" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="streszczenie">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10000" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:element name="opis">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="autorzy">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="autor" type="autorTyp" minOccurs="1" maxOccurs="unbounded" />
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="streszczenie" type="streszczenie" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

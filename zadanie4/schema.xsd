@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="file://root.zadanie2/"
+    xmlns:xpr="file://root.zadanie2/"
+    xmlns:meta="file://root.zadanie2/meta"
+    targetNamespace="file://root.zadanie2/"
+    elementFormDefault="qualified">
+
+    <xsd:import namespace="file://root.zadanie2/meta"
+        schemaLocation="metadata.xsd" />
+
+    <xsd:group name="grupaWspółrzędne">
+        <xsd:sequence>
+            <xsd:element name="wysokość" type="wysokośćGeograficzna" />
+            <xsd:element name="szerokość" type="szerokośćGeograficzna" />
+        </xsd:sequence>
+    </xsd:group>
+
+    <xsd:simpleType name="stopnieGeograficzne">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minInclusive value="0" />
+            <xsd:maxExclusive value="180" />
+            <xsd:fractionDigits value="2" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="string1k">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1000" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typDzień">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="31" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typMiesiąc">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Styczeń" />
+            <xsd:enumeration value="Luty" />
+            <xsd:enumeration value="Marzec" />
+            <xsd:enumeration value="Kwiecień" />
+            <xsd:enumeration value="Maj" />
+            <xsd:enumeration value="Czerwiec" />
+            <xsd:enumeration value="Lipiec" />
+            <xsd:enumeration value="Sierpień" />
+            <xsd:enumeration value="Wrzesień" />
+            <xsd:enumeration value="Październik" />
+            <xsd:enumeration value="Listopad" />
+            <xsd:enumeration value="Grudzień" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typRok">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="1" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="wysokośćGeograficzna">
+        <xsd:simpleContent>
+            <xsd:extension base="stopnieGeograficzne">
+                <xsd:attribute name="typ">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:token">
+                            <xsd:enumeration value="N" />
+                            <xsd:enumeration value="S" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="szerokośćGeograficzna">
+        <xsd:simpleContent>
+            <xsd:extension base="stopnieGeograficzne">
+                <xsd:attribute name="typ">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:token">
+                            <xsd:enumeration value="W" />
+                            <xsd:enumeration value="E" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="krajTyp">
+        <xsd:sequence>
+            <xsd:element name="nazwa" type="xsd:string" />
+            <xsd:element name="stolica" type="stolicaTyp" />
+            <xsd:element name="grupy-etniczne" type="etniczneTyp" />
+            <xsd:element name="strefy-czasowe" type="strefyTyp" />
+            <xsd:element name="ważne-wydarzenia" type="wydarzeniaTyp" minOccurs="0" />
+            <xsd:element name="populacja" type="populacjaTyp" />
+            <xsd:element name="PKB" type="PKBTyp" />
+            <xsd:element name="waluta" type="xsd:token" />
+            <xsd:element name="region">
+                <xsd:complexType>
+                    <xsd:attribute name="idref" type="xsd:NCName" use="required" />
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="stolicaTyp">
+        <xsd:sequence>
+            <xsd:element name="nazwa" type="xsd:string" />
+            <xsd:element name="współrzędne">
+                <xsd:complexType>
+                    <xsd:group ref="grupaWspółrzędne" />
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="etniczneTyp">
+        <xsd:sequence>
+            <xsd:element name="grupa-etniczna" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:attribute name="jednostka">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:token">
+                                <xsd:enumeration value="%" />
+                                <xsd:enumeration value="k" />
+                                <xsd:enumeration value="mln" />
+                                <xsd:enumeration value="mld" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:attribute>
+                    <xsd:attribute name="idref" type="xsd:NCName" use="required" />
+                    <xsd:attribute name="wartość">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:decimal">
+                                <xsd:fractionDigits value="2" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:attribute>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="strefyTyp">
+        <xsd:sequence>
+            <xsd:element name="strefa-czasowa" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:attribute name="wartość">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:decimal">
+                                <xsd:fractionDigits value="1" />
+                                <xsd:minInclusive value="0" />
+                                <xsd:maxInclusive value="12" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:attribute>
+                    <xsd:attribute name="znak">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:token">
+                                <xsd:enumeration value="p" />
+                                <xsd:enumeration value="m" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:attribute>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="wydarzeniaTyp">
+        <xsd:sequence>
+            <xsd:element name="ważne-wydarzenie" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:attribute name="id" type="xsd:NCName" use="required" />
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="populacjaTyp">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:positiveInteger">
+                <xsd:attribute name="jednostka" default="osoba">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="osoba" />
+                            <xsd:enumeration value="tysiące" />
+                            <xsd:enumeration value="miliony" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="PKBTyp">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:decimal">
+                <xsd:attribute name="waluta" type="xsd:token" fixed="USD" use="required" />
+                <xsd:attribute name="jednostka" default="mld">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="" />
+                            <xsd:enumeration value="k" />
+                            <xsd:enumeration value="mln" />
+                            <xsd:enumeration value="mld" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="wydarzeniaDescTyp">
+        <xsd:sequence>
+            <xsd:element name="nazwa" type="string1k" />
+
+            <xsd:choice>
+                <xsd:element name="data">
+                    <xsd:complexType>
+                        <xsd:attribute name="dzień" type="typDzień" />
+                        <xsd:attribute name="miesiąc" type="typMiesiąc" />
+                        <xsd:attribute name="rok" type="typRok" />
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="kiedy" type="xsd:date" />
+            </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:NCName" use="required" />
+    </xsd:complexType>
+
+    <xsd:simpleType name="Zadanie2Odp">
+        <xsd:restriction base="xsd:NCName">
+            <xsd:pattern value="\p{Lu}\p{Ll}+" />
+            <xsd:maxLength value="20" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:element name="dokument">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="meta:opis" minOccurs="1" />
+
+                <xsd:element name="kraje" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="kraj" minOccurs="1" maxOccurs="unbounded" type="krajTyp" />
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+
+                <xsd:element name="regiony" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="region" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:attribute name="id" type="xsd:NCName" use="required" />
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+
+                <xsd:element name="grupy-etniczne" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="grupa-etniczna" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:attribute name="id" type="Zadanie2Odp" use="required" />
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+
+                <xsd:element name="wydarzenia" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="wydarzenie" maxOccurs="unbounded" type="wydarzeniaDescTyp" />
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+
+        <xsd:key name="regionId">
+            <xsd:selector xpath="xpr:regiony/xpr:region" />
+            <xsd:field xpath="@id" />
+        </xsd:key>
+
+        <xsd:key name="etnicznaId">
+            <xsd:selector xpath="xpr:grupy-etniczne/xpr:grupa-etniczna" />
+            <xsd:field xpath="@id" />
+        </xsd:key>
+
+        <xsd:key name="eventId">
+            <xsd:selector xpath="xpr:wydarzenia/xpr:wydarzenie" />
+            <xsd:field xpath="@id" />
+        </xsd:key>
+
+        <xsd:keyref name="regionIdRef" refer="regionId">
+            <xsd:selector xpath="xpr:kraje/xpr:kraj/xpr:region" />
+            <xsd:field xpath="@idref" />
+        </xsd:keyref>
+
+        <xsd:keyref name="etnicznaIdRef" refer="etnicznaId">
+            <xsd:selector xpath="xpr:kraje/xpr:kraj/xpr:grupy-etniczne/xpr:grupa-etniczna" />
+            <xsd:field xpath="@idref" />
+        </xsd:keyref>
+
+        <xsd:keyref name="eventIdRef" refer="eventId">
+            <xsd:selector xpath="xpr:kraje/xpr:kraj/xpr:ważne-wydarzenia/xpr:ważne-wydarzenie" />
+            <xsd:field xpath="@id" />
+        </xsd:keyref>
+    </xsd:element>
+</xsd:schema> 
