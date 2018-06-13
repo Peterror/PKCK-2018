@@ -108,7 +108,7 @@ function createSvg() {
 function createPdf() {
     updateXML();
     // have no idea how?
-    exec("java -jar ../tools/saxon9he.jar -s:newXML.xml -xsl:../toxml.xsl -o:converted.xml");
+    exec("fop -xml converted.xml -xsl ../topdf.xsl -pdf result.pdf");
 }
 
 function addXMLCountryNode(data) {
