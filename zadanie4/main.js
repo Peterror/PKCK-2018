@@ -78,11 +78,31 @@ function getXMLEthnicGroup() {
 }
 
 function updateXML() {
-    if (!fileContent.validate(schemaContent))
-        return "Cannot validate changes";
+    if (!fileContent.validate(schemaContent)) {
+        return "Cannot validate changes" + fileContent.validationErrors;
+    }
 
     fs.writeFileSync("newXML.xml", fileContent.toString());
     return "Ok.";
+}
+
+function addXMLCountryNode(data) {
+    let subroot = fileContent.get("/n:dokument/n:kraje", xmlnamespaces);
+    let krajNode = subroot.node("kraj").node("nazwa", data.nazwa)
+        .parent().node("stolica").node("nazwa", data.stolica.nazwa).parent()
+        .node("współrzędne")
+        .node("wysokość", data.stolica.wysokosc[0]).attr({typ: data.stolica.wysokosc[1]}).parent()
+        .node("szerokość", data.stolica.szerokosc[0]).attr({typ: data.stolica.szerokosc[1]}).parent()
+        .parent().parent()
+        .node("grupy-etniczne").parent()
+        .node("strefy-czasowe").parent()
+        .node("ważne-wydarzenia").parent()
+        .node("populacja", data.populacja).attr({jednostka: "osoba"}).parent()
+        .node("PKB", data.PKB).attr({waluta: "USD", jednostka: "mld"}).parent()
+        .node("waluta", data.waluta).parent()
+        .node("region").attr({idref: data.region});
+
+    fileContent = xml.parseXml(fileContent.toString());
 }
 
 exports.dialogSelectXMLFile = dialogSelectXMLFile;
@@ -91,5 +111,6 @@ exports.getXMLCountry = getXMLCountry;
 exports.getXMLRegions = getXMLRegions;
 exports.getXMLEthnicGroup = getXMLEthnicGroup;
 exports.updateXML = updateXML;
+exports.addXMLCountryNode = addXMLCountryNode;
 
 app.on('ready', createWindow);

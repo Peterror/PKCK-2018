@@ -27,7 +27,7 @@ function onClickLoadFile() {
         $("#mainErrorAlert").addClass("alert-success")
             .removeClass("alert-danger")
             .text("Pomyślnie wczytano plik XML, możesz przystąpić do edycji.")
-            .fadeIn();
+            .fadeIn().delay(2000).fadeOut();
         $(".menuButton").removeClass("btn-light").addClass("btn-primary");
         window.status = true;
     }
@@ -73,7 +73,7 @@ function countryListFill() {
         if (allCountryObjects[i].name() == "kraj") {
             let current = allCountryObjects[i];
             let el = $(`
-                <button type="button" class="btn btn-primary btn-lg btn-block">
+                <button type="button" class="btn btn-primary btn-lg btn-block countrySelector">
                     ${getXPathText(current, "n:nazwa")[0]}
                 </button>
             `);
@@ -85,12 +85,12 @@ function countryListFill() {
         }
     }
     let el = $(`
-                <button type="button" class="btn btn-primary btn-lg btn-block">
+                <button type="button" class="btn btn-success btn-lg btn-block countrySelector">
                     Stwórz nowy kraj
                 </button>
             `);
     el.click(function() {
-        saveCountry(null, true);
+        editCountry();
     });
     $("#countryListContainer").append(el);
 
@@ -98,6 +98,7 @@ function countryListFill() {
 
     let regionsObjects = mainProcess.getXMLRegions();
     let optionlist = $("#countryRegion");
+    $("#countryRegion option").remove();
     for (let i = 0; i < regionsObjects.length; ++i) {
         if (regionsObjects[i].name() == "region") {
             let current = regionsObjects[i];
@@ -123,8 +124,12 @@ function editCountry(countryNode) {
         create = true;
     }
 
-    $("#countryDelete");
-    $("#countryEditForm").submit(function() {
+    $("#countryDelete").off("click").click(function() {
+        countryNode.remove();
+        updateXML();
+        countryListFill();
+    });
+    $("#countryEditForm").off("submit").submit(function() {
         saveCountry(countryNode, create);
         countryListFill();
         return false;
@@ -133,33 +138,57 @@ function editCountry(countryNode) {
 
 function saveCountry(countryNode, create) {
     if (create) {
-        console.log(mainProcess.getXMLCountry()[0].parent()
-                    .node("kraj").node("nazwa", "nowy").parent()
-                    .node("stolica").node("nazwa").parent().node("współrzędne")
-                    .node("wysokość").attr({typ: "N"}).parent()
-                    .node("szerokość").attr({typ: "E"}).parent().parent().parent());
-        let currentCountries = mainProcess.getXMLCountry();
-        for (let i = 0; i < currentCountries.length; ++i) {
-            console.log(getXPathText(currentCountries[i], "n:nazwa")[0])
-                console.log("Znalazłem!");
-        }
+        let krajeNode = mainProcess.getXMLCountry()[0].parent();
+        mainProcess.addXMLCountryNode({
+            nazwa: $("#countryName").val(),
+            stolica: {
+                nazwa: $("#capitalName").val(),
+                szerokosc: [
+                    $("#capitalWidth").val().slice(0, -1),
+                    $("#capitalWidth").val().slice(-1)
+                ],
+                wysokosc: [
+                    $("#capitalHeight").val().slice(0, -1),
+                    $("#capitalHeight").val().slice(-1)
+                ],
+            },
+            populacja: $("#countryPopulation").val(),
+            PKB: $("#countryPKB").val(),
+            region: $("#countryRegion").val(),
+            waluta: $("#countryWaluta").val(),
+        });
+    } else {
+        countryNode.get("n:nazwa", xmlnamespaces).text($("#countryName").val());
+        countryNode.get("n:stolica/n:nazwa", xmlnamespaces).text($("#capitalName").val());
+        countryNode.get("n:stolica/n:współrzędne/n:wysokość", xmlnamespaces)
+            .text($("#capitalHeight").val().slice(0, -1));
+        countryNode.get("n:stolica/n:współrzędne/n:szerokość", xmlnamespaces)
+            .text($("#capitalWidth").val().slice(0, -1));
+        countryNode.get("n:stolica/n:współrzędne/n:wysokość/@typ", xmlnamespaces)
+            .value($("#capitalHeight").val().slice(-1));
+        countryNode.get("n:stolica/n:współrzędne/n:szerokość/@typ", xmlnamespaces)
+            .value($("#capitalWidth").val().slice(-1));
+        countryNode.get("n:populacja", xmlnamespaces).text($("#countryPopulation").val());
+        countryNode.get("n:waluta", xmlnamespaces).text($("#countryWaluta").val());
+        countryNode.get("n:PKB", xmlnamespaces).text($("#countryPKB").val());
+        countryNode.get("n:region/@idref", xmlnamespaces).value($("#countryRegion").val());
     }
-    countryNode.get("n:nazwa", xmlnamespaces).text($("#countryName").val());
-    countryNode.get("n:stolica/n:nazwa", xmlnamespaces).text($("#capitalName").val());
-    countryNode.get("n:stolica/n:współrzędne/n:wysokość", xmlnamespaces)
-        .text($("#capitalHeight").val().slice(0, -1));
-    countryNode.get("n:stolica/n:współrzędne/n:szerokość", xmlnamespaces)
-        .text($("#capitalWidth").val().slice(0, -1));
-    countryNode.get("n:stolica/n:współrzędne/n:wysokość/@typ", xmlnamespaces)
-        .value($("#capitalHeight").val().slice(-1));
-    countryNode.get("n:stolica/n:współrzędne/n:szerokość/@typ", xmlnamespaces)
-        .value($("#capitalWidth").val().slice(-1));
-    countryNode.get("n:populacja", xmlnamespaces).text($("#countryPopulation").val());
-    countryNode.get("n:waluta", xmlnamespaces).text($("#countryWaluta").val());
-    countryNode.get("n:PKB", xmlnamespaces).text($("#countryPKB").val());
-    countryNode.get("n:region/@idref", xmlnamespaces).value($("#countryRegion").val());
+    updateXML();
+}
 
-    mainProcess.updateXML();
+function updateXML() {
+    let result = mainProcess.updateXML();
+    if(result !== "Ok.") {
+        $("#mainErrorAlert").removeClass("alert-success")
+            .addClass("alert-danger")
+            .text(result)
+            .fadeIn();
+    } else {
+        $("#mainErrorAlert").addClass("alert-success")
+            .removeClass("alert-danger")
+            .text("Zmodyfikowano!")
+            .fadeIn(function() {$("#mainErrorAlert").delay(1000).fadeOut();});
+    }
 }
 
 function ethnicGroupListFill() {

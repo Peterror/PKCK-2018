@@ -121,7 +121,7 @@
 
     <xsd:complexType name="etniczneTyp">
         <xsd:sequence>
-            <xsd:element name="grupa-etniczna" maxOccurs="unbounded">
+            <xsd:element name="grupa-etniczna" minOccurs="0" maxOccurs="unbounded">
                 <xsd:complexType>
                     <xsd:attribute name="jednostka">
                         <xsd:simpleType>
@@ -148,7 +148,7 @@
 
     <xsd:complexType name="strefyTyp">
         <xsd:sequence>
-            <xsd:element name="strefa-czasowa" maxOccurs="unbounded">
+            <xsd:element name="strefa-czasowa" minOccurs="0" maxOccurs="unbounded">
                 <xsd:complexType>
                     <xsd:attribute name="wartość">
                         <xsd:simpleType>
