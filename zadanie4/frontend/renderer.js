@@ -75,6 +75,7 @@ function getXPathText(node, path) {
 function countryListFill() {
     // Remove all previous content
     $("#countryListContainer").html('');
+    $("#ethicGroupCountryEditList option").remove();
 
     let el = $(`
                 <button type="button" class="btn btn-success btn-lg btn-block countrySelector">
@@ -99,6 +100,8 @@ function countryListFill() {
                 editCountry(current);
             });
             $("#countryListContainer").append(el);
+            $("#ethicGroupCountryEditList").append(`
+                <option>${getXPathText(current, "n:nazwa")[0]}</option>`);
 
         }
     }
@@ -144,6 +147,7 @@ function editCountry(countryNode) {
         countryListFill();
         return false;
     });
+    $("#countrySubmit").html(create ? "Utwórz nowy" : "Edytuj kraj");
 }
 
 function saveCountry(countryNode, create) {
@@ -202,6 +206,7 @@ function updateXML() {
 }
 
 function ethnicGroupListFill() {
+    countryListFill();
     // Remove all previous content
     $("#ethnicGroupListContainer").html('');
 
@@ -224,11 +229,14 @@ function ethnicGroupListFill() {
                 </button>
             `);
             el.click(function() {
-              console.log(current.name());
                 editEthnicGroup(current);
+                $("#etchicGroupChange").off("click").click(function() {
+                    updateEthicGroup(current);
+                });
+                window.ethicGroup = getXPathText(current, "@id")[0];
+                $("#ethicGroupCountryEditList").trigger("change");
             });
             $("#ethnicGroupListContainer").append(el);
-
         }
     }
 
@@ -259,11 +267,11 @@ function editEthnicGroup(ethnicGroupNode) {
         ethnicGroupListFill();
         return false;
     });
+    $("#ethnicGroupSubmit").html(create ? "Utwórz grupę etniczną" : "Modyfikuj grupę etniczną");
 }
 
 function saveEthnicGroup(ethnicGroupNode, create) {
     if (create) {
-        console.log("Create");
           mainProcess.addXMLEthnicGroupNode({
               nazwaID: $("#ethnicGroupID").val(),
           });
@@ -271,7 +279,6 @@ function saveEthnicGroup(ethnicGroupNode, create) {
     } else {
         let allCountryObjects = mainProcess.getXMLCountry();
         for (let i = 0; i < allCountryObjects.length; ++i) {
-            console.log(allCountryObjects[i].toString());
             try {
                 allCountryObjects[i]
                     .find("n:grupy-etniczne/n:grupa-etniczna[@idref='" +
@@ -287,4 +294,48 @@ function saveEthnicGroup(ethnicGroupNode, create) {
         ethnicGroupNode.get("@id", xmlnamespaces).value($("#ethnicGroupID").val());
     }
     updateXML();
+}
+
+function updateEthicGroup(ethicGroupNode) {
+    let groupName = getXPathText(ethicGroupNode, "@id")[0];
+    let countryName = $("#ethicGroupCountryEditList").val();
+    let value = $("#ethicGroupCountryEditInput").val();
+
+    let allCountryObjects = mainProcess.getXMLCountry();
+    for (let i = 0; i < allCountryObjects.length; ++i) {
+        let nazwa = getXPathText(allCountryObjects[i], "n:nazwa")[0];
+        if (nazwa == countryName) {
+            let mod = allCountryObjects[i].find("n:grupy-etniczne/n:grupa-etniczna[@idref='"
+                                                + groupName +
+                                                "']", xmlnamespaces);
+            if (mod.length > 0 && value != 0) {
+                mod[0].get("@wartość").value(value);
+            } else if (mod.length == 0 && value != 0) {
+                allCountryObjects[i].get("n:grupy-etniczne", xmlnamespaces)
+                    .node("grupa-etniczna")
+                    .attr({jednostka: "%", idref: groupName, wartość: value});
+            } else if (mod.length != 0 && value == 0) {
+                mod[0].remove();
+            }
+            mainProcess.refresh();
+            updateXML();
+        }
+    }
+}
+
+function onEthicGroupEditChange() {
+    if (window.ethicGroup) {
+        let allCountryObjects = mainProcess.getXMLCountry();
+        for (let i = 0; i < allCountryObjects.length; ++i) {
+            let nazwa = getXPathText(allCountryObjects[i], "n:nazwa")[0];
+            if (nazwa == $("#ethicGroupCountryEditList").val()) {
+                let mod = allCountryObjects[i].find("n:grupy-etniczne/n:grupa-etniczna[@idref='"
+                                                    + window.ethicGroup +
+                                                    "']", xmlnamespaces);
+                $("#ethicGroupCountryEditInput").val(mod.length == 0 ?
+                                                     0.0 :
+                                                     mod[0].get("@wartość").value());
+            }
+        }
+    }
 }

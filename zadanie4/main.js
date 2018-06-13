@@ -107,7 +107,6 @@ function createSvg() {
 
 function createPdf() {
     updateXML();
-    // have no idea how?
     exec("fop -xml converted.xml -xsl ../topdf.xsl -pdf result.pdf");
 }
 
@@ -150,6 +149,9 @@ exports.createDoc = {
     html: createHtml,
     pdf: createPdf,
     svg: createSvg
+};
+exports.refresh = function () {
+    fileContent = xml.parseXml(fileContent.toString());
 };
 
 app.on('ready', createWindow);
