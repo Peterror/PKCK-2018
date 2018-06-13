@@ -243,11 +243,18 @@ function editEthnicGroup(ethnicGroupNode) {
     }
 
     $("#ethnicGroupDelete").off("click").click(function() {
+        mainProcess.getXMLCountry().forEach(function(x) {
+            x.find("n:grupy-etniczne/n:grupa-etniczna[@idref='" +
+                   ethnicGroupNode.get("@id", xmlnamespaces).value() + "']",
+                   xmlnamespaces).forEach(function(x) {
+                       x.remove();
+                   });
+        });
         ethnicGroupNode.remove();
         updateXML();
         ethnicGroupListFill();
     });
-    $("#ethnicGroupEditForm").submit(function() {
+    $("#ethnicGroupEditForm").off("submit").submit(function() {
         saveEthnicGroup(ethnicGroupNode, create);
         ethnicGroupListFill();
         return false;
@@ -256,34 +263,28 @@ function editEthnicGroup(ethnicGroupNode) {
 
 function saveEthnicGroup(ethnicGroupNode, create) {
     if (create) {
+        console.log("Create");
           mainProcess.addXMLEthnicGroupNode({
               nazwaID: $("#ethnicGroupID").val(),
           });
           //let currentEthnicGroups = mainProcess.getXMLEthnicGroup();
-      } else {
-          let allCountryObjects = mainProcess.getXMLCountry();
-          for (let i = 0; i < allCountryObjects.length; ++i) {
-            /* podejscie 1
-            if (allCountryObjects[i].name() == "kraj") {
-              let currentNode = allCountryObjects[i];
-                ethnicGroupObjects = getXPathText(currentNode, "n:/grupy-etniczne");
-                for (let j = 0; i < ethnicGroupObjects.length; ++i) {
-                  if (getXPathText(ethnicGroupObjects[j], "@idref") == ethnicGroupNode.get("@id", xmlnamespaces).value()) {
-                    // podmiana znalezionego atrybutu pasujacego do opisu
-
-                  }
-                }
-              */
-              // podejscie 2 berserker sypiacy wyjatkami
-              try{
-                allCountryObjects[i].get("n:grupy-etniczne/grupa_etniczna/@idref='" + ethnicGroupNode.get("@id", xmlnamespaces).value() + "'", xmlnamespaces).value($("#ethnicGroupID").val());
-              }catch(err) {
+    } else {
+        let allCountryObjects = mainProcess.getXMLCountry();
+        for (let i = 0; i < allCountryObjects.length; ++i) {
+            console.log(allCountryObjects[i].toString());
+            try {
+                allCountryObjects[i]
+                    .find("n:grupy-etniczne/n:grupa-etniczna[@idref='" +
+                          ethnicGroupNode.get("@id", xmlnamespaces).value() + "']",
+                          xmlnamespaces)
+                    .forEach(function (x) {
+                        x.get("@idref").value($("#ethnicGroupID").val());
+                    });
+            } catch(err) {
                 console.log(err);
-              }
             }
-
-          }
-          ethnicGroupNode.get("@id", xmlnamespaces).value($("#ethnicGroupID").val());
-
+        }
+        ethnicGroupNode.get("@id", xmlnamespaces).value($("#ethnicGroupID").val());
+    }
     updateXML();
 }
