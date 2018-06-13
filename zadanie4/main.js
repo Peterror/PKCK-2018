@@ -1,7 +1,8 @@
 const electron = require('electron');
 const fs = require('fs');
 const xml = require('libxmljs');
-const exec = require('child_process').execSync;
+const execSync = require('child_process').execSync;
+const exec = require('child_process').exec;
 const app = electron.app;
 const remote = electron.remote;
 const BrowserWindow = electron.BrowserWindow;
@@ -83,7 +84,31 @@ function updateXML() {
     }
 
     fs.writeFileSync("newXML.xml", fileContent.toString());
+
+    exec("java -jar ../tools/saxon9he.jar -s:newXML.xml -xsl:../toxml.xsl -o:converted.xml");
+
     return "Ok.";
+}
+
+function createTxt() {
+    updateXML();
+    exec("java -jar ../tools/saxon9he.jar -s:converted.xml -xsl:../totxt.xsl -o:output.txt");
+}
+
+function createHtml() {
+    updateXML();
+    exec("java -jar ../tools/saxon9he.jar -s:converted.xml -xsl:../toxhtml.xsl -o:output.html");
+}
+
+function createSvg() {
+    updateXML();
+    exec("java -jar ../tools/saxon9he.jar -s:converted.xml -xsl:../tosvg.xsl -o:output.svg");
+}
+
+function createPdf() {
+    updateXML();
+    // have no idea how?
+    exec("java -jar ../tools/saxon9he.jar -s:newXML.xml -xsl:../toxml.xsl -o:converted.xml");
 }
 
 function addXMLCountryNode(data) {
@@ -112,5 +137,11 @@ exports.getXMLRegions = getXMLRegions;
 exports.getXMLEthnicGroup = getXMLEthnicGroup;
 exports.updateXML = updateXML;
 exports.addXMLCountryNode = addXMLCountryNode;
+exports.createDoc = {
+    txt: createTxt,
+    html: createHtml,
+    pdf: createPdf,
+    svg: createSvg
+};
 
 app.on('ready', createWindow);

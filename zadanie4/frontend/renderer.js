@@ -34,6 +34,14 @@ function onClickLoadFile() {
     $("#formSelectFileToOpen").find("button[type=submit] > i").attr('hidden', true);
 }
 
+function selectMainWindow() {
+    $(".mainScreen").fadeOut();
+    $("#helloScreen").delay(500).fadeIn(countryListFill);
+
+    return true;
+
+}
+
 function selectEditCountryWindow() {
     if (window.status === "false") {
         return false;

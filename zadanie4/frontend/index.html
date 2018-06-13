@@ -18,6 +18,10 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0);"
+                           onclick="selectMainWindow()">Główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);"
                            onclick="selectEditCountryWindow()">Kraje</a>
                     </li>
                     <li class="nav-item">
@@ -77,6 +81,22 @@
                                     <button type="button" class="btn btn-light btn-lg btn-block menuButton"
                                             id="mainButtonEditEthics" onclick="selectEditEthnicGroupWindow()">
                                         Edytuj grupy
+                                    </button>
+                                    <button type="button" class="btn btn-light btn-lg btn-block menuButton"
+                                            id="mainButtonCreateTXT" onclick="mainProcess.createDoc.txt()">
+                                        Stwórz Txt
+                                    </button>
+                                    <button type="button" class="btn btn-light btn-lg btn-block menuButton"
+                                            id="mainButtonCreateHTML" onclick="mainProcess.createDoc.html()">
+                                        Stwórz HTML
+                                    </button>
+                                    <button type="button" class="btn btn-light btn-lg btn-block menuButton"
+                                            id="mainButtonCreateSVG" onclick="mainProcess.createDoc.svg()">
+                                        Stwórz SVG
+                                    </button>
+                                    <button type="button" class="btn btn-light btn-lg btn-block menuButton"
+                                            id="mainButtonCreatePDF" onclick="mainProcess.createDoc.pdf()">
+                                        Stwórz PDF
                                     </button>
                                 </div>
                             </div>
