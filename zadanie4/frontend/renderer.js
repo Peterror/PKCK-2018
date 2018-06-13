@@ -76,6 +76,16 @@ function countryListFill() {
     // Remove all previous content
     $("#countryListContainer").html('');
 
+    let el = $(`
+                <button type="button" class="btn btn-success btn-lg btn-block countrySelector">
+                    Stwórz nowy kraj
+                </button>
+            `);
+    el.click(function() {
+        editCountry();
+    });
+    $("#countryListContainer").append(el);
+
     let allCountryObjects = mainProcess.getXMLCountry();
     for (let i = 0; i < allCountryObjects.length; ++i) {
         if (allCountryObjects[i].name() == "kraj") {
@@ -92,15 +102,7 @@ function countryListFill() {
 
         }
     }
-    let el = $(`
-                <button type="button" class="btn btn-success btn-lg btn-block countrySelector">
-                    Stwórz nowy kraj
-                </button>
-            `);
-    el.click(function() {
-        editCountry();
-    });
-    $("#countryListContainer").append(el);
+
 
 
 
@@ -204,6 +206,15 @@ function ethnicGroupListFill() {
     $("#ethnicGroupListContainer").html('');
 
     let allEthnicObjects = mainProcess.getXMLEthnicGroup();
+    let el = $(`
+                <button type="button" class="btn btn-success btn-lg btn-block">
+                    Stwórz nową grupę
+                </button>
+            `);
+    el.click(function() {
+        editEthnicGroup();
+    });
+    $("#ethnicGroupListContainer").append(el);
     for (let i = 0; i < allEthnicObjects.length; ++i) {
         if (allEthnicObjects[i].name() == "grupa-etniczna") {
             let current = allEthnicObjects[i];
@@ -213,21 +224,14 @@ function ethnicGroupListFill() {
                 </button>
             `);
             el.click(function() {
+              console.log(current.name());
                 editEthnicGroup(current);
             });
             $("#ethnicGroupListContainer").append(el);
 
         }
     }
-    let el = $(`
-                <button type="button" class="btn btn-primary btn-lg btn-block">
-                    Stwórz nową grupę etniczną
-                </button>
-            `);
-    el.click(function() {
-        saveEthnicGroup(null, true);
-    });
-    $("#ethnicGroupListContainer").append(el);
+
 }
 
 function editEthnicGroup(ethnicGroupNode) {
@@ -238,7 +242,11 @@ function editEthnicGroup(ethnicGroupNode) {
         create = true;
     }
 
-    $("#ethnicGroupDelete");
+    $("#ethnicGroupDelete").off("click").click(function() {
+        ethnicGroupNode.remove();
+        updateXML();
+        ethnicGroupListFill();
+    });
     $("#ethnicGroupEditForm").submit(function() {
         saveEthnicGroup(ethnicGroupNode, create);
         ethnicGroupListFill();
@@ -248,15 +256,34 @@ function editEthnicGroup(ethnicGroupNode) {
 
 function saveEthnicGroup(ethnicGroupNode, create) {
     if (create) {
-		// Następnej linijki nie ogarniam
-        console.log(mainProcess.getXMLEthnicGroup()[0].parent()); 
-		
-        let currentEthnicGroups = mainProcess.getXMLEthnicGroup();
-        for (let i = 0; i < currentEthnicGroups.length; ++i) {
-            console.log(getXPathText(currentEthnicGroups[i], "@id")[0])
-                console.log("Znalazłem!");
-        }
-    }
-    ethnicGroupNode.get("@id", xmlnamespaces).value($("#ethnicGroupID").val());
+          mainProcess.addXMLEthnicGroupNode({
+              nazwaID: $("#ethnicGroupID").val(),
+          });
+          //let currentEthnicGroups = mainProcess.getXMLEthnicGroup();
+      } else {
+          let allCountryObjects = mainProcess.getXMLCountry();
+          for (let i = 0; i < allCountryObjects.length; ++i) {
+            /* podejscie 1
+            if (allCountryObjects[i].name() == "kraj") {
+              let currentNode = allCountryObjects[i];
+                ethnicGroupObjects = getXPathText(currentNode, "n:/grupy-etniczne");
+                for (let j = 0; i < ethnicGroupObjects.length; ++i) {
+                  if (getXPathText(ethnicGroupObjects[j], "@idref") == ethnicGroupNode.get("@id", xmlnamespaces).value()) {
+                    // podmiana znalezionego atrybutu pasujacego do opisu
+
+                  }
+                }
+              */
+              // podejscie 2 berserker sypiacy wyjatkami
+              try{
+                allCountryObjects[i].get("n:grupy-etniczne/grupa_etniczna/@idref='" + ethnicGroupNode.get("@id", xmlnamespaces).value() + "'", xmlnamespaces).value($("#ethnicGroupID").val());
+              }catch(err) {
+                console.log(err);
+              }
+            }
+
+          }
+          ethnicGroupNode.get("@id", xmlnamespaces).value($("#ethnicGroupID").val());
+
     updateXML();
 }

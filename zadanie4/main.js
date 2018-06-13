@@ -130,6 +130,13 @@ function addXMLCountryNode(data) {
     fileContent = xml.parseXml(fileContent.toString());
 }
 
+function addXMLEthnicGroupNode(data) {
+    let subroot = fileContent.get("/n:dokument/n:grupy-etniczne", xmlnamespaces);
+    let grupaNode = subroot.node("grupa-etniczna").attr({id: data.nazwaID});
+
+    fileContent = xml.parseXml(fileContent.toString());
+}
+
 exports.dialogSelectXMLFile = dialogSelectXMLFile;
 exports.loadXMLFile = loadXMLFile;
 exports.getXMLCountry = getXMLCountry;
@@ -137,6 +144,7 @@ exports.getXMLRegions = getXMLRegions;
 exports.getXMLEthnicGroup = getXMLEthnicGroup;
 exports.updateXML = updateXML;
 exports.addXMLCountryNode = addXMLCountryNode;
+exports.addXMLEthnicGroupNode = addXMLEthnicGroupNode;
 exports.createDoc = {
     txt: createTxt,
     html: createHtml,
