@@ -250,6 +250,5 @@ function saveEthnicGroup(ethnicGroupNode, create) {
         }
     }
     ethnicGroupNode.get("@id", xmlnamespaces).value($("#ethnicGroupID").val());
-
-    mainProcess.updateXML();
+    updateXML();
 }
