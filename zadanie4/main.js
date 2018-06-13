@@ -73,6 +73,10 @@ function getXMLRegions() {
     return fileContent.find("/n:dokument/n:regiony/n:region", xmlnamespaces);
 }
 
+function getXMLEthnicGroup() {
+    return fileContent.find("/n:dokument/n:grupy-etniczne/n:grupa-etniczna", xmlnamespaces);
+}
+
 function updateXML() {
     if (!fileContent.validate(schemaContent))
         return "Cannot validate changes";
@@ -85,6 +89,7 @@ exports.dialogSelectXMLFile = dialogSelectXMLFile;
 exports.loadXMLFile = loadXMLFile;
 exports.getXMLCountry = getXMLCountry;
 exports.getXMLRegions = getXMLRegions;
+exports.getXMLEthnicGroup = getXMLEthnicGroup;
 exports.updateXML = updateXML;
 
 app.on('ready', createWindow);

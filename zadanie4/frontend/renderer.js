@@ -44,6 +44,16 @@ function selectEditCountryWindow() {
     return true;
 }
 
+function selectEditEthnicGroupWindow() {
+    if (window.status === "false") {
+        return false;
+    }
+    $(".mainScreen").fadeOut();
+    $("#editEthnicGroupScreen").delay(500).fadeIn(ethnicGroupListFill);
+
+    return true;
+}
+
 function getXPathText(node, path) {
     return node.find(path, xmlnamespaces).map(function(x) {
         if(x.text)
@@ -53,7 +63,6 @@ function getXPathText(node, path) {
         return null;
     });
 }
-
 
 function countryListFill() {
     // Remove all previous content
@@ -149,6 +158,69 @@ function saveCountry(countryNode, create) {
     countryNode.get("n:waluta", xmlnamespaces).text($("#countryWaluta").val());
     countryNode.get("n:PKB", xmlnamespaces).text($("#countryPKB").val());
     countryNode.get("n:region/@idref", xmlnamespaces).value($("#countryRegion").val());
+
+    mainProcess.updateXML();
+}
+
+function ethnicGroupListFill() {
+    // Remove all previous content
+    $("#ethnicGroupListContainer").html('');
+
+    let allEthnicObjects = mainProcess.getXMLEthnicGroup();
+    for (let i = 0; i < allEthnicObjects.length; ++i) {
+        if (allEthnicObjects[i].name() == "grupa-etniczna") {
+            let current = allEthnicObjects[i];
+            let el = $(`
+                <button type="button" class="btn btn-primary btn-lg btn-block">
+                    ${getXPathText(current, "@id")[0]}
+                </button>
+            `);
+            el.click(function() {
+                editEthnicGroup(current);
+            });
+            $("#ethnicGroupListContainer").append(el);
+
+        }
+    }
+    let el = $(`
+                <button type="button" class="btn btn-primary btn-lg btn-block">
+                    Stwórz nową grupę etniczną
+                </button>
+            `);
+    el.click(function() {
+        saveEthnicGroup(null, true);
+    });
+    $("#ethnicGroupListContainer").append(el);
+}
+
+function editEthnicGroup(ethnicGroupNode) {
+    let create = false;
+    if (ethnicGroupNode) {
+        $("#ethnicGroupID").val(getXPathText(ethnicGroupNode, "@id")[0]);
+    } else {
+        create = true;
+    }
+
+    $("#ethnicGroupDelete");
+    $("#ethnicGroupEditForm").submit(function() {
+        saveEthnicGroup(ethnicGroupNode, create);
+        ethnicGroupListFill();
+        return false;
+    });
+}
+
+function saveEthnicGroup(ethnicGroupNode, create) {
+    if (create) {
+		// Następnej linijki nie ogarniam
+        console.log(mainProcess.getXMLEthnicGroup()[0].parent()); 
+		
+        let currentEthnicGroups = mainProcess.getXMLEthnicGroup();
+        for (let i = 0; i < currentEthnicGroups.length; ++i) {
+            console.log(getXPathText(currentEthnicGroups[i], "@id")[0])
+                console.log("Znalazłem!");
+        }
+    }
+    ethnicGroupNode.get("@id", xmlnamespaces).text($("#ethnicGroupID").val());
 
     mainProcess.updateXML();
 }

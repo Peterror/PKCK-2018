@@ -21,7 +21,8 @@
                            onclick="selectEditCountryWindow()">Kraje</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Grupy Etniczne</a>
+                        <a class="nav-link" href="javascript:void(0);"
+						   onclick="selectEditEthnicGroupWindow()">Grupy Etniczne</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Wydarzenia</a>
@@ -75,7 +76,7 @@
                                         Edytuj kraje
                                     </button>
                                     <button type="button" class="btn btn-light btn-lg btn-block menuButton"
-                                            id="mainButtonEditEthics">
+                                            id="mainButtonEditEthics" onclick="selectEditEthnicGroupWindow()">
                                         Edytuj grupy
                                     </button>
                                     <button type="button" class="btn btn-light btn-lg btn-block menuButton"
@@ -158,6 +159,37 @@
                                 <button type="submit" class="btn btn-primary btn-block"
                                         id="countrySubmit">
                                     Modyfikuj kraj
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mainScreen" id="editEthnicGroupScreen" style="display: none">
+                <div class="col-4" id="ethnicGroupListContainer"></div>
+                <div class="col-8" id="ethnicGroupEditFormContainer">
+                    <form id="ethnicGroupEditForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="ethnicGroupID">Nazwa grupy etnicznej</label>
+                                <input type="text" class="form-control" id="ethnicGroupID"
+                                       aria-describedby="nameHelp" placeholder="Nazwa grupy etnicznej"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label>&nbsp;</label>
+                                <button type="button" class="btn btn-danger btn-block"
+                                        style="vertical-align: bottm" id="ethnicGroupDelete">
+                                    Usuń grupę etniczną
+                                </button>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>&nbsp;</label>
+                                <button type="submit" class="btn btn-primary btn-block"
+                                        id="ethnicGroupSubmit">
+                                    Modyfikuj grupę etniczną
                                 </button>
                             </div>
                         </div>
