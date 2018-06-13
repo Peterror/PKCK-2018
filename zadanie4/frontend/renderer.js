@@ -249,7 +249,7 @@ function saveEthnicGroup(ethnicGroupNode, create) {
                 console.log("Znalazłem!");
         }
     }
-    ethnicGroupNode.get("@id", xmlnamespaces).text($("#ethnicGroupID").val());
+    ethnicGroupNode.get("@id", xmlnamespaces).value($("#ethnicGroupID").val());
 
     mainProcess.updateXML();
 }
